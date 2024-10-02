@@ -31,7 +31,8 @@ export default {
       secondaryPattern: "linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)"
     },
     backgroundImage: {
-      'text-gradient': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)',
+      'text-main-gradient': 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%)',
+      'text-secondary-gradient': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)',
     },
   },
   plugins: [],
