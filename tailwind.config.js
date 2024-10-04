@@ -5,12 +5,13 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			text: {
+  			fontcolors: {
   				'100': '##E0E0FF',
   				'200': '#B3B3D1',
   				'300': '#666680',
   				'400': '#5A39FF',
-  				'500': '##917CFF'
+  				'500': '##917CFF',
+				'700': '#131A35'
   			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

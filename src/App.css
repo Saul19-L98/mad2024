@@ -62,5 +62,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: #131A35;
+  }
+  .main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
   }
 }
