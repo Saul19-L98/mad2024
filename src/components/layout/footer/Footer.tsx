@@ -1,7 +1,7 @@
 import { IArrowWhite } from "@/assets/Icons/symbols/IArrowWhite";
 import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+// import { useState } from "react";
 import {
   IFacebook,
   IInstagram,
@@ -9,41 +9,19 @@ import {
   IMad,
 } from "@/assets/Icons/main/IconsIndex";
 export const Footer = () => {
-  const [currentFilter, setCurrentFilter] = useState<number | null>(null);
+  // const [currentFilter, setCurrentFilter] = useState<number | null>(null);
   const items = [
-    // {
-    //   id: 0,
-    //   name: "Mostrar todos",
-    // },
-    {
-      id: 1,
-      name: "Branding",
-    },
-    {
-      id: 2,
-      name: "UX/UI",
-    },
-    {
-      id: 3,
-      name: "Ilustración",
-    },
-    {
-      id: 4,
-      name: "Multimedia",
-    },
-    {
-      id: 5,
-      name: "Editorial",
-    },
-    {
-      id: 6,
-      name: "Social Media/Publicidad",
-    },
+    { id: 1, name: "Branding" },
+    { id: 2, name: "UX/UI" },
+    { id: 3, name: "Ilustración" },
+    { id: 4, name: "Multimedia" },
+    { id: 5, name: "Editorial" },
+    { id: 6, name: "Social Media/Publicidad" },
   ];
   return (
     <footer className="w-full bg-white">
       <div className="w-full px-4 py-12 sm:px-16">
-        <div className="flex flex-col justify-start gap-12 md:justify-between md:gap-4 md:flex-row">
+        <div className="flex flex-col justify-start gap-12 md:justify-between md:gap-4 md:flex-row md:mb-[6.685rem]">
           <div className="w-full md:w-2/4 lg:w-[25rem]">
             <section className="flex flex-col items-start w-full gap-8">
               <div>
@@ -55,10 +33,22 @@ export const Footer = () => {
                 Muestra Anual de Diseño Gráfico 2024
               </h2>
               <p className="font-base text-start text-base leading-5 text-[#5C5C85]">
-                mad@udb.edu.sv
+                <a href="mailto:mad@udb.edu.sv">mad@udb.edu.sv</a>
+              </p>
+              <p className="font-base text-start text-base leading-5 text-[#5C5C85]">
+                Hecho con ❤️ por{" "}
+                <a
+                  href="https://saul19-l98.github.io/saul_lainez/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="sallanez"
+                  className="hover:opacity-75"
+                >
+                  Sallanez
+                </a>
               </p>
               <div>
-                <ul className="flex-row justify-center hidden gap-6 sm:flex">
+                <ul className="flex flex-row justify-center gap-6">
                   <li>
                     <a
                       href="https://www.facebook.com"
@@ -97,8 +87,14 @@ export const Footer = () => {
             </section>
           </div>
           <div className="w-full md:w-2/4 lg:w-[25rem]">
-            <section className="flex flex-col items-start gap-8">
-              <h3 className="text-sm font-base  leading-5 text-[#5C5C85]">
+            <section
+              aria-labelledby="explore-categories"
+              className="flex flex-col items-start gap-8"
+            >
+              <h3
+                id="explore-categories"
+                className="text-sm font-base  leading-5 text-[#5C5C85]"
+              >
                 Explora nuestras categorías
               </h3>
               <div className="flex flex-row flex-wrap justify-start w-full gap-2">
