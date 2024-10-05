@@ -86,7 +86,7 @@ export const Footer = () => {
               </div>
             </section>
           </div>
-          <div className="w-full md:w-2/4 lg:w-[25rem]">
+          <div className="w-full md:w-2/4 lg:max-w-xs">
             <section
               aria-labelledby="explore-categories"
               className="flex flex-col items-start gap-8"
