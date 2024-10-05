@@ -6,11 +6,12 @@ export default {
   	extend: {
   		colors: {
   			fontcolors: {
-  				'100': '##E0E0FF',
+  				'100': '#E0E0FF',
   				'200': '#B3B3D1',
   				'300': '#666680',
   				'400': '#5A39FF',
   				'500': '##917CFF',
+				'600': '#161625',
 				'700': '#131A35'
   			},
   			background: 'hsl(var(--background))',
@@ -56,7 +57,8 @@ export default {
   		},
   		backgroundColor: {
   			bgColors: {
-  				'100': '#F4F8FB',
+				'100': '#F4F8FB',
+				'200':"#250F8B",
   				'800': '#161625',
   				'900': '#131A35'
   			},
@@ -77,6 +79,7 @@ export default {
   		}
   	},
   	backgroundImage: {
+		'default-bg': 'linear-gradient(90deg, rgba(37,15,128,1) 0%, rgba(37,15,128,1) 100%)',
   		'text-main-gradient': 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%)',
   		'text-secondary-gradient': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)'
   	}
