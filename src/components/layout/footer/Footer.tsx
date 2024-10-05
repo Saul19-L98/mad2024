@@ -29,13 +29,13 @@ export const Footer = () => {
                   <IMad />
                 </a>
               </div>
-              <h2 className="font-base text-start text-base leading-5 text-[#5C5C85]">
+              <h2 className="font-poppins font-base text-start text-base leading-5 text-[#5C5C85]">
                 Muestra Anual de Diseño Gráfico 2024
               </h2>
-              <p className="font-base text-start text-base leading-5 text-[#5C5C85]">
+              <p className="font-poppins font-base text-start text-base leading-5 text-[#5C5C85]">
                 <a href="mailto:mad@udb.edu.sv">mad@udb.edu.sv</a>
               </p>
-              <p className="font-base text-start text-base leading-5 text-[#5C5C85]">
+              <p className="font-poppins font-base text-start text-base leading-5 text-[#5C5C85]">
                 Hecho con ❤️ por{" "}
                 <a
                   href="https://saul19-l98.github.io/saul_lainez/index.html"
@@ -93,7 +93,7 @@ export const Footer = () => {
             >
               <h3
                 id="explore-categories"
-                className="text-sm font-base  leading-5 text-[#5C5C85]"
+                className="text-sm font-base font-poppins leading-5 text-[#5C5C85]"
               >
                 Explora nuestras categorías
               </h3>
@@ -106,7 +106,7 @@ export const Footer = () => {
                   />
                 ))}
               </div>
-              <Button className="w-full bg-text-main-gradient sm:w-fit hover:bg-default-bg">
+              <Button className="w-full font-semibold font-poppins bg-text-main-gradient sm:w-fit hover:bg-default-bg">
                 Ver todos los portafolios
                 <span className="ml-2">
                   <IArrowWhite />
@@ -117,7 +117,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="w-full px-0 py-3 text-center sm:px-16 bg-text-main-gradient">
-        <p className="py-5 mx-auto text-sm text-fontcolors-100">
+        <p className="py-5 mx-auto text-sm font-semibold font-poppins text-fontcolors-100">
           © 2024 MAD. Todos los derechos reservados
         </p>
       </div>

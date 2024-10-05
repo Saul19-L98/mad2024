@@ -38,7 +38,7 @@ export const ResourceTypeBadge: React.FC<ResourceTypeBadgeProps> = ({
       )}
     >
       <div className="flex items-center gap-2">
-        <p className="text-[12px] xl:w-full xl:text-center font-medium tracking-[-0.24px] leading-[20px]">
+        <p className="font-poppins text-sm font-semibold xl:w-full xl:text-center tracking-[-0.24px] leading-[20px]">
           {data.name}
         </p>
       </div>

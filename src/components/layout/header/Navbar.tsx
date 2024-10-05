@@ -19,7 +19,7 @@ export const Navbar = () => {
         <div className="flex flex-row items-center gap-8">
           <Button
             type="button"
-            className="bg-[#FFB512] text-fontcolors-700 hover:bg-[#F68606]"
+            className="bg-[#FFB512] font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
           >
             Portafolios
             <span className="ml-[0.625rem]">
