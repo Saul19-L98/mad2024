@@ -6,7 +6,10 @@ export default {
   	extend: {
 		fontFamily: {
         poppins: ['poppins', 'sans-serif']
-      },
+		},
+		boxShadow: {
+			'custom-main-shadow': '0px 0px 16px 0px rgba(28, 207, 250, 0.75)',
+		},
   		colors: {
   			fontcolors: {
   				'100': '#E0E0FF',
@@ -88,6 +91,13 @@ export default {
 		'text-title-description-title': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%)',
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate",function({ addUtilities }) {
+      const newUtilities = {
+        '.border-gradient': {
+          borderImage: 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%) 1',
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    })],
 }
 

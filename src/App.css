@@ -124,4 +124,37 @@
     display: flex;
     justify-content: center;
   }
+  /* .border-gradient {
+    position: relative;
+    border-radius: 1rem;
+  } */
+
+  /* .border-gradient::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%);
+  } */
+  /* .box {
+    border-radius: 32px;
+    /*1*/
+    /* border: 1px solid transparent; */
+    /*2*/
+    /* background: linear-gradient(45deg, red, blue) border-box; */
+    /*3*/
+    /* -webkit-mask: */
+      /*4*/
+      /* linear-gradient(#fff 0 0) padding-box, */
+      /* linear-gradient(#fff 0 0); */
+    /* -webkit-mask-composite: xor; */
+    /*5'*/
+    /* mask-composite: exclude; */
+    /*5*/
+  /* } */ 
 }
