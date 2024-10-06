@@ -4,12 +4,12 @@ export default {
     content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
   	extend: {
-		fontFamily: {
-        poppins: ['poppins', 'sans-serif']
-		},
-		boxShadow: {
-			'custom-main-shadow': '0px 0px 16px 0px rgba(28, 207, 250, 0.75)',
-		},
+  		fontFamily: {
+  			poppins: ['poppins', 'sans-serif']
+  		},
+  		boxShadow: {
+  			'custom-main-shadow': '0px 0px 16px 0px rgba(28, 207, 250, 0.75)'
+  		},
   		colors: {
   			fontcolors: {
   				'100': '#E0E0FF',
@@ -17,8 +17,8 @@ export default {
   				'300': '#666680',
   				'400': '#5A39FF',
   				'500': '##917CFF',
-				'600': '#161625',
-				'700': '#131A35'
+  				'600': '#161625',
+  				'700': '#131A35'
   			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -63,8 +63,8 @@ export default {
   		},
   		backgroundColor: {
   			bgColors: {
-				'100': '#F4F8FB',
-				'200':"#250F8B",
+  				'100': '#F4F8FB',
+  				'200': '#250F8B',
   				'800': '#161625',
   				'900': '#131A35'
   			},
@@ -82,13 +82,35 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	},
   	backgroundImage: {
-		'default-bg': 'linear-gradient(90deg, rgba(37,15,128,1) 0%, rgba(37,15,128,1) 100%)',
+  		'default-bg': 'linear-gradient(90deg, rgba(37,15,128,1) 0%, rgba(37,15,128,1) 100%)',
   		'text-main-gradient': 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%)',
   		'text-title-gradient': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)',
-		'text-title-description-title': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%)',
+  		'text-title-description-title': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%)'
   	}
   },
   plugins: [require("tailwindcss-animate",function({ addUtilities }) {
