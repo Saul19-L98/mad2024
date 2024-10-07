@@ -74,7 +74,8 @@ export default {
   			borderColors: {
   				'100': '#4A4A6A',
   				'200': '#5C5C85'
-  			}
+  			},
+			divider: '#3D3D5C'
   		},
   		mainPattern: 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%)',
   		secondaryPattern: 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)',

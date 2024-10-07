@@ -1,7 +1,6 @@
 import "./App.css";
 import { Footer } from "./components/layout/footer/Footer";
 import { Navbar } from "./components/layout/header/Navbar";
-import { Button } from "./components/ui/button";
 import { IHeroArrow } from "@/assets/Icons/symbols/IHeroArrow";
 import { IArrowBlack } from "@/assets/Icons/symbols/IArrowBlack";
 import { cn } from "./lib/utils";
@@ -15,60 +14,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { faqs } from "@/data/home/faqs/faqs.data";
+import { tagsHomeTable } from "@/data/tags/tags.optins";
+import { ResourceTypeBadge } from "./components/common/CustomBadge";
+import { mainTags } from "@/data/tags/tags.optins";
+import { Searchbar } from "@/components/common/pages/Searchbar";
+import { userProfiles } from "@/data/users/users.mock";
+import { CardElement } from "./components/common/CardElement";
+import { Button } from "./components/ui/button";
+import { IArrow } from "./assets/Icons/symbols/IArrow";
 
 function App() {
-  const items = [
-    { id: 0, name: "Ver todos los portafolios", href: "#" },
-    { id: 1, name: "Branding", href: "#" },
-    { id: 2, name: "UX/UI", href: "#" },
-    { id: 3, name: "Ilustración", href: "#" },
-    { id: 4, name: "Multimedia", href: "#" },
-    { id: 5, name: "Editorial", href: "#" },
-    { id: 6, name: "Social Media/Publicidad", href: "#" },
-  ];
-  const faqs = [
-    {
-      id: 1,
-      question:
-        "¿Quiénes son los diseñadores que presentarán sus portafolios en el evento?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.", // You can fill in the answers as needed
-    },
-    {
-      id: 2,
-      question:
-        "¿Qué debo esperar del proceso creativo de los diseñadores estudiantes?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-    {
-      id: 3,
-      question:
-        "¿Cuáles son las áreas de diseño gráfico que están cubiertas en los portafolios?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-    {
-      id: 4,
-      question:
-        "¿Dónde puedo encontrar una lista de los diseñadores que participaron del evento?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-    {
-      id: 5,
-      question:
-        "¿Hay alguna oportunidad de hablar directamente con los diseñadores?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-    {
-      id: 6,
-      question: "¿Puedo acceder a los portafolios de los diseñadores en línea?",
-      answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-    },
-  ];
   return (
     // 120,90
-    <div className="flex flex-col items-center w-full max-w-[90rem] gap-0 min-h-screen overflow-hidden">
+    <div className="flex flex-col items-center w-full min-h-screen gap-0 overflow-hidden">
       <Navbar />
       <main className="flex flex-col items-center justify-start w-full min-h-screen gap-12">
-        <section className="w-full px-4 pt-6 pb-4">
+        <section className="w-full max-w-[90rem] px-4 pt-6 pb-4">
           <div className="flex flex-col justify-between 2xl:flex-row">
             <div>
               <h1 className="bg-clip-text text-transparent font-poppins font-light leading-[100%] text-center 2xl:text-start lg:text-[12.5rem] text-[7.5rem] bg-text-title-gradient">
@@ -102,7 +64,7 @@ function App() {
             <div className="h-full bg-[#131A35]">
               <div className="w-full h-full mx-auto">
                 <div className="grid h-full grid-cols-2 grid-rows-4 gap-2 lg:grid-cols-4 lg:grid-rows-2 sm:gap-4 md:p-4 md:border md:border-[#1CCFFA] rounded-[2rem] md:shadow-custom-main-shadow">
-                  {items.map((item) => (
+                  {tagsHomeTable.map((item) => (
                     <div
                       key={item.id}
                       className={cn(
@@ -155,7 +117,63 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="w-full px-4 md:px-16">
+
+        <section className="w-full">
+          <div className="w-full max-w-[90rem] mx-auto px-4 pb-8 md:pb-12 md:py-4 md:px-16">
+            <div className="w-full max-w-[35.625rem] mb-12 mx-auto min-[1320px]:mx-0 ">
+              <h2 className="max-w-[35.62rem] font-poppins font-normal md:text-[1.75rem] text-center min-[1320px]:text-start leading-8 tracking-tighter text-[#fff]">
+                Explora la visión creativa del futuro: portafolios que innovan.
+              </h2>
+            </div>
+            <div
+              aria-labelledby="explore-categories"
+              className="w-full flex flex-col items-start max-w-[90rem] gap-8"
+            >
+              <div className="flex flex-col items-center justify-center w-full gap-12 min-[1320px]:gap-4 min-[1320px]:flex-row min-[1320px]:justify-between">
+                <div className="flex flex-row flex-wrap justify-start md:justify-center order-2 min-[1320px]:justify-start w-full gap-2 h-fit min-[1320px]:order-1">
+                  {mainTags.map((item) => (
+                    <ResourceTypeBadge
+                      isMain
+                      key={item.id}
+                      data={item}
+                      callToAction={() => console.log(`Clicked ${item.name}`)}
+                    />
+                  ))}
+                </div>
+                <Searchbar className="order-1 w-full min-[1320px]:order-2" />
+              </div>
+            </div>
+          </div>
+          <div className="px-4 pt-8 pb-16 border-y md:px-16 bg-bgColors-900 md:pb-24 md:pt-12 border-divider">
+            {/* FIX:  avatarImageUrl={user.portfolioImages[0]} and dynamicImageUrl={user.profilePicture}*/}
+            <div className="w-full max-w-[90rem] mx-auto">
+              <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
+                {userProfiles.map((user) => (
+                  <CardElement
+                    key={user.id}
+                    avatarImageUrl={user.profilePicture}
+                    avatarFallback={user.nameFallback}
+                    name={user.name}
+                    badgeData={user.role}
+                    dynamicImageUrl={user.portfolioImages[0]}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-row justify-center w-full mt-24">
+                <Button
+                  type="button"
+                  className="bg-[#FFB512]  font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
+                >
+                  Ver todos los portafolios
+                  <span className="ml-[0.625rem]">
+                    <IArrow />
+                  </span>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full px-4 mb-16 md:px-16">
           <h2 className="text-center font-normal leading-5 tracking-tight font-poppins text-[2rem] text-[#B3B3D1]">
             FAQ’s
           </h2>
@@ -178,8 +196,6 @@ function App() {
             ))}
           </Accordion>
         </section>
-
-        <Button className="bg-text-main-gradient">Click me</Button>
       </main>
       <Footer />
     </div>

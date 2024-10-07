@@ -8,19 +8,13 @@ import {
   ILinkedin,
   IMad,
 } from "@/assets/Icons/main/IconsIndex";
+import { tagsFooter } from "@/data/tags/tags.optins";
 export const Footer = () => {
   // const [currentFilter, setCurrentFilter] = useState<number | null>(null);
-  const items = [
-    { id: 1, name: "Branding" },
-    { id: 2, name: "UX/UI" },
-    { id: 3, name: "Ilustración" },
-    { id: 4, name: "Multimedia" },
-    { id: 5, name: "Editorial" },
-    { id: 6, name: "Social Media/Publicidad" },
-  ];
+
   return (
-    <footer className="w-full bg-white">
-      <div className="w-full px-4 py-12 sm:px-16">
+    <footer className="flex flex-col items-center w-full bg-white">
+      <div className="w-full max-w-[90rem] px-4 py-12 sm:px-16">
         <div className="flex flex-col justify-start gap-12 md:justify-between md:gap-4 md:flex-row md:mb-[6.685rem]">
           <div className="w-full md:w-2/4 lg:w-[25rem]">
             <section className="flex flex-col items-start w-full gap-8">
@@ -98,7 +92,7 @@ export const Footer = () => {
                 Explora nuestras categorías
               </h3>
               <div className="flex flex-row flex-wrap justify-start w-full gap-2">
-                {items.map((item) => (
+                {tagsFooter.map((item) => (
                   <ResourceTypeBadge
                     key={item.id}
                     data={item}

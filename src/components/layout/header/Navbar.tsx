@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   return (
-    <header className="w-full px-4 my-4 md:px-16">
+    <header className="w-full max-w-[90rem] px-4 my-4 md:px-16">
       <nav className="flex flex-row items-center justify-between">
         <div>
           <a href="/" aria-label="Home">
