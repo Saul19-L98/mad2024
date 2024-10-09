@@ -123,7 +123,7 @@ export const CardElement: React.FC<CardElementProps> = ({
             <a
               href="#"
               target="_self"
-              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md shadow-lg w-[11.5rem]"
+              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.5rem]"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation(); // Prevents card click event
@@ -138,7 +138,7 @@ export const CardElement: React.FC<CardElementProps> = ({
             <a
               href="#"
               target="_self"
-              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md shadow-lg w-[11.25rem]"
+              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.25rem]"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation(); // Prevents card click event

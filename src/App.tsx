@@ -21,10 +21,14 @@ import { mainTags } from "@/data/tags/tags.optins";
 import { Searchbar } from "@/components/common/pages/Searchbar";
 import { userProfiles } from "@/data/users/users.mock";
 import { CardElement } from "./components/common/CardElement";
+import { useHomeStore } from "./store/home.store";
 import { Button } from "./components/ui/button";
 import { IArrow } from "./assets/Icons/symbols/IArrow";
+import { SkeletonCard } from "./components/common/pages/SkeletonCards";
 
 function App() {
+  const { filteredUsers, isSearching } = useHomeStore();
+  console.log(filteredUsers);
   return (
     // 120,90
     <div className="flex flex-col items-center w-full min-h-screen gap-0 overflow-hidden">
@@ -148,16 +152,31 @@ function App() {
             {/* FIX:  avatarImageUrl={user.portfolioImages[0]} and dynamicImageUrl={user.profilePicture}*/}
             <div className="w-full max-w-[90rem] mx-auto">
               <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
-                {userProfiles.map((user) => (
-                  <CardElement
-                    key={user.id}
-                    avatarImageUrl={user.profilePicture}
-                    avatarFallback={user.nameFallback}
-                    name={user.name}
-                    badgeData={user.role}
-                    dynamicImageUrl={user.portfolioImages[0]}
-                  />
-                ))}
+                {filteredUsers.length < 1 &&
+                  !isSearching &&
+                  userProfiles.map((user) => (
+                    <CardElement
+                      key={user.id}
+                      avatarImageUrl={user.profilePicture}
+                      avatarFallback={user.nameFallback}
+                      name={user.name}
+                      badgeData={user.role}
+                      dynamicImageUrl={user.portfolioImages[0]}
+                    />
+                  ))}
+                {filteredUsers.length > 0 &&
+                  !isSearching &&
+                  filteredUsers.map((user) => (
+                    <CardElement
+                      key={user.id}
+                      avatarImageUrl={user.profilePicture}
+                      avatarFallback={user.nameFallback}
+                      name={user.name}
+                      badgeData={user.role}
+                      dynamicImageUrl={user.portfolioImages[0]}
+                    />
+                  ))}
+                {isSearching && <SkeletonCard numberOfCards={9} />}
               </div>
               <div className="flex flex-row justify-center w-full mt-24">
                 <Button
