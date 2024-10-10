@@ -9,9 +9,10 @@ import {
   IMad,
 } from "@/assets/Icons/main/IconsIndex";
 import { tagsFooter } from "@/data/tags/tags.optins";
+import { useNavigate, Link } from "react-router-dom";
 export const Footer = () => {
   // const [currentFilter, setCurrentFilter] = useState<number | null>(null);
-
+  const navigate = useNavigate();
   return (
     <footer className="flex flex-col items-center w-full bg-white">
       <div className="w-full max-w-[90rem] px-4 py-12 sm:px-16">
@@ -19,9 +20,15 @@ export const Footer = () => {
           <div className="w-full md:w-2/4 lg:w-[25rem]">
             <section className="flex flex-col items-start w-full gap-8">
               <div>
-                <a href="/" aria-label="Home">
+                <Link
+                  to="/"
+                  aria-label="Home"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <IMad />
-                </a>
+                </Link>
               </div>
               <h2 className="font-poppins font-base text-start text-base leading-5 text-[#5C5C85]">
                 Muestra Anual de Diseño Gráfico 2024
@@ -31,50 +38,50 @@ export const Footer = () => {
               </p>
               <p className="font-poppins font-base text-start text-base leading-5 text-[#5C5C85]">
                 Hecho con ❤️ por{" "}
-                <a
-                  href="https://saul19-l98.github.io/saul_lainez/index.html"
+                <Link
+                  to="https://saul19-l98.github.io/saul_lainez/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="sallanez"
                   className="hover:opacity-75"
                 >
                   Sallanez
-                </a>
+                </Link>
               </p>
               <div>
                 <ul className="flex flex-row justify-center gap-6">
                   <li>
-                    <a
-                      href="https://www.facebook.com"
+                    <Link
+                      to="https://www.facebook.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Facebook"
                       className="hover:opacity-75"
                     >
                       <IFacebook />
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://www.instagram.com"
+                    <Link
+                      to="https://www.instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"
                       className="hover:opacity-75"
                     >
                       <IInstagram />
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://www.linkedin.com"
+                    <Link
+                      to="https://www.linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
                       className="hover:opacity-75"
                     >
                       <ILinkedin />
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -100,7 +107,13 @@ export const Footer = () => {
                   />
                 ))}
               </div>
-              <Button className="w-full font-semibold font-poppins bg-text-main-gradient sm:w-fit hover:bg-default-bg">
+              <Button
+                className="w-full font-semibold font-poppins bg-text-main-gradient sm:w-fit hover:bg-default-bg"
+                onClick={() => {
+                  navigate("/portfolio");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 Ver todos los portafolios
                 <span className="ml-2">
                   <IArrowWhite />
