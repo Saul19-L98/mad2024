@@ -117,8 +117,8 @@ export const Home = () => {
 
       <section className="w-full">
         <div className="w-full max-w-[90rem] mx-auto px-4 pb-8 md:pb-12 md:py-4 md:px-16">
-          <div className="w-full max-w-[35.625rem] mb-12 mx-auto min-[1320px]:mx-0 ">
-            <h2 className="max-w-[35.62rem] font-poppins font-normal md:text-[1.75rem] text-center min-[1320px]:text-start leading-8 tracking-tighter text-[#fff]">
+          <div className="w-full max-w-[31.625rem] mb-12 mx-auto min-[1320px]:mx-0 ">
+            <h2 className="w-full font-poppins font-normal md:text-[1.75rem] text-center min-[1320px]:text-start leading-8 tracking-tighter text-[#fff]">
               Explora la visión creativa del futuro: portafolios que innovan.
             </h2>
           </div>

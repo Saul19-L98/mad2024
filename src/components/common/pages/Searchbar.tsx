@@ -41,7 +41,7 @@ export const Searchbar: React.FC<SearchbarProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "relative w-full max-w-[46.02rem] min-[1320px]:max-w-sm h-8",
+        "relative w-full max-w-[54.02rem] 2xl:max-w-sm h-8",
         className
       )}
     >
