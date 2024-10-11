@@ -216,7 +216,7 @@ export const userProfiles = [
     tags: ["Branding", "UX/UI"],
   },
   {
-    id: 7,
+    id: 10,
     name: "Carolina Ávalos",
     nameFallback: "CA",
     role: { id: 2, name: "Diseño UX/UI", href: "#" },
@@ -240,7 +240,7 @@ export const userProfiles = [
     tags: ["Diseño UX/UI", "Branding", "Ilustración"],
   },
   {
-    id: 8,
+    id: 11,
     name: "Pedro Martínez",
     nameFallback: "PM",
     role: { id: 3, name: "Ilustración", href: "#" },
@@ -264,7 +264,7 @@ export const userProfiles = [
     tags: ["Ilustración", "Branding"],
   },
   {
-    id: 9,
+    id: 12,
     name: "Lucía González",
     nameFallback: "LG",
     role: { id: 1, name: "Branding", href: "#" },
@@ -288,7 +288,7 @@ export const userProfiles = [
     tags: ["Branding", "UX/UI"],
   },
   {
-    id: 10,
+    id: 13,
     name: "Jun Park",
     nameFallback: "JP",
     role: { id: 4, name: "Multimedia", href: "#" },
@@ -312,7 +312,7 @@ export const userProfiles = [
     tags: ["Diseño UX/UI", "Branding", "Ilustración"],
   },
   {
-    id: 11,
+    id: 14,
     name: "Brenda García",
     nameFallback: "BG",
     role: { id: 6, name: "Social Media/Publicidad", href: "#" },
@@ -336,7 +336,7 @@ export const userProfiles = [
     tags: ["Ilustración", "Branding"],
   },
   {
-    id: 12,
+    id: 15,
     name: "Melvin Brown",
     nameFallback: "MB",
     role: { id: 5, name: "Editorial", href: "#" },
@@ -360,7 +360,7 @@ export const userProfiles = [
     tags: ["Branding", "UX/UI"],
   },
   {
-    id: 13,
+    id: 16,
     name: "Miguel Ávalos",
     nameFallback: "MA",
     role: { id: 5, name: "Editorial", href: "#" },
@@ -384,7 +384,7 @@ export const userProfiles = [
     tags: ["Diseño UX/UI", "Branding", "Ilustración"],
   },
   {
-    id: 14,
+    id: 17,
     name: "Karla Martínez",
     nameFallback: "CM",
     role: { id: 3, name: "Ilustración", href: "#" },
@@ -408,7 +408,7 @@ export const userProfiles = [
     tags: ["Ilustración", "Branding"],
   },
   {
-    id: 15,
+    id: 18,
     name: "Lucía González",
     nameFallback: "LG",
     role: { id: 1, name: "Branding", href: "#" },
@@ -432,7 +432,7 @@ export const userProfiles = [
     tags: ["Branding", "UX/UI"],
   },
   {
-    id: 16,
+    id: 19,
     name: "Jun Park",
     nameFallback: "JP",
     role: { id: 4, name: "Multimedia", href: "#" },
@@ -456,7 +456,7 @@ export const userProfiles = [
     tags: ["Diseño UX/UI", "Branding", "Ilustración"],
   },
   {
-    id: 17,
+    id: 20,
     name: "Brenda García",
     nameFallback: "BG",
     role: { id: 6, name: "Social Media/Publicidad", href: "#" },
@@ -480,7 +480,7 @@ export const userProfiles = [
     tags: ["Ilustración", "Branding"],
   },
   {
-    id: 18,
+    id: 21,
     name: "Melvin Brown",
     nameFallback: "MB",
     role: { id: 5, name: "Editorial", href: "#" },

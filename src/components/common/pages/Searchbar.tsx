@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "@/assets/Icons/symbols/ISearch";
 import { cn } from "@/lib/utils";
 import { useHomeStore } from "@/store/home.store";
-import { userProfiles } from "@/data/users/users.mock";
+import { userProfiles } from "@/data/users/portfolio.mock";
 
 interface SearchbarProps {
   className?: string;
@@ -27,6 +27,7 @@ export const Searchbar: React.FC<SearchbarProps> = ({ className }) => {
     const filteredUsers = userProfiles.filter((user) =>
       user.name.toLowerCase().includes(inputUserName)
     );
+    console.log(filteredUsers);
     if (filteredUsers.length > 0) {
       setFilteredUsers(filteredUsers);
       setTimeout(() => {

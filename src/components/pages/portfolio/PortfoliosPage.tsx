@@ -1,16 +1,20 @@
-import { IArrow } from "@/assets/Icons/symbols/IArrow";
+// import { IArrow } from "@/assets/Icons/symbols/IArrow";
 import { CardElement } from "@/components/common/CardElement";
 import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { Searchbar } from "@/components/common/pages/Searchbar";
 import { SkeletonCard } from "@/components/common/pages/SkeletonCards";
 import { Layout } from "@/components/layout/layout";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { portafolioTags } from "@/data/tags/tags.optins";
 import { useHomeStore } from "@/store/home.store";
-import { userProfiles } from "@/data/users/portfolio.mock";
+// import { userProfiles } from "@/data/users/portfolio.mock";
+import { Pagination } from "@/components/pages/portfolio/components/Pagination";
+import { usePaginationStore } from "@/store/pagination.store";
 
 export const PortfoliosPage = () => {
   const { filteredUsers, isSearching } = useHomeStore();
+  const { currentContent } = usePaginationStore();
+  console.log("portfolio current", currentContent);
   return (
     <Layout>
       <section className="w-full">
@@ -43,9 +47,9 @@ export const PortfoliosPage = () => {
           {/* FIX:  avatarImageUrl={user.portfolioImages[0]} and dynamicImageUrl={user.profilePicture}*/}
           <div className="w-full max-w-[90rem] mx-auto">
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
-              {FileReader.length < 1 &&
+              {filteredUsers.length < 1 &&
                 !isSearching &&
-                userProfiles.map((user) => (
+                currentContent.map((user) => (
                   <CardElement
                     key={user.id}
                     avatarImageUrl={user.profilePicture}
@@ -57,7 +61,7 @@ export const PortfoliosPage = () => {
                 ))}
               {filteredUsers.length > 0 &&
                 !isSearching &&
-                filteredUsers.map((user) => (
+                currentContent.map((user) => (
                   <CardElement
                     key={user.id}
                     avatarImageUrl={user.profilePicture}
@@ -70,7 +74,7 @@ export const PortfoliosPage = () => {
               {isSearching && <SkeletonCard numberOfCards={9} />}
             </div>
             <div className="flex flex-row justify-center w-full mt-24">
-              <Button
+              {/* <Button
                 type="button"
                 className="bg-[#FFB512]  font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
               >
@@ -78,7 +82,8 @@ export const PortfoliosPage = () => {
                 <span className="ml-[0.625rem]">
                   <IArrow />
                 </span>
-              </Button>
+              </Button> */}
+              <Pagination userProfiles={filteredUsers} />
             </div>
           </div>
         </div>
