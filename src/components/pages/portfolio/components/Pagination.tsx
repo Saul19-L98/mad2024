@@ -13,9 +13,9 @@ interface PaginationProps {
 export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
   const [searchParams] = useSearchParams();
   const page = parseInt(searchParams.get("page") || "1");
-  const pageSize = parseInt(searchParams.get("pageSize") || "15"); // Default to 16 cards per page
+  const pageSize = parseInt(searchParams.get("pageSize") || "18"); // Default to 18 cards per page
   const [totalCount, setTotalCount] = useState(0);
-
+  console.log(page, pageSize);
   const { setCurrentContent } = usePaginationStore();
   // Calculate start and end indexes for slicing the array
 
@@ -28,6 +28,7 @@ export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
       const currentUsers = usersData.slice(startIndex, endIndex);
       console.log("data", usersData);
       console.log("pagination current", currentUsers);
+      console.log("find users", usersData.length);
       setTotalCount(usersData.length);
       setCurrentContent(currentUsers);
     }
@@ -44,14 +45,29 @@ export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
 
   return (
     <Suspense fallback={<Skeleton className="w-full" />}>
-      <div className="w-full">
-        {/* Pagination Controls */}
-        <PaginationWithLinks
-          page={page}
-          pageSize={pageSize}
-          totalCount={totalCount}
-        />
-      </div>
+      {userProfiles.length >= 18 && (
+        <div className="w-full">
+          {/* Pagination Controls */}
+          <PaginationWithLinks
+            page={page}
+            pageSize={pageSize}
+            totalCount={userProfiles.length}
+          />
+        </div>
+      )}
+      {
+        // Render the user profiles
+        userProfiles.length === 0 && (
+          <div className="w-full">
+            {/* Pagination Controls */}
+            <PaginationWithLinks
+              page={page}
+              pageSize={pageSize}
+              totalCount={totalCount}
+            />
+          </div>
+        )
+      }
     </Suspense>
   );
 };

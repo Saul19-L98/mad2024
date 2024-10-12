@@ -22,9 +22,15 @@ import { Button } from "@/components/ui/button";
 import { IArrow } from "@/assets/Icons/symbols/IArrow";
 import { SkeletonCard } from "@/components/common/pages/SkeletonCards";
 import { useHomeStore } from "@/store/home.store";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Home = () => {
-  const { filteredUsers, isSearching } = useHomeStore();
+  const { filteredUsers, isSearching, setFilteredUsers } = useHomeStore();
+  const navigate = useNavigate();
+  useEffect(() => {
+    setFilteredUsers([]);
+  }, []);
   return (
     <main className="flex flex-col items-center justify-start w-full min-h-screen gap-12">
       <section className="w-full max-w-[90rem] px-4 pt-6 pb-4">
@@ -133,19 +139,22 @@ export const Home = () => {
                     isMain
                     key={item.id}
                     data={item}
-                    callToAction={() => console.log(`Clicked ${item.name}`)}
+                    callToAction={() => navigate("/portfolio")}
                   />
                 ))}
               </div>
-              <Searchbar className="order-1 w-full min-[1320px]:order-2" />
+              <Searchbar
+                className="order-1 w-full min-[1320px]:order-2"
+                isFromHome
+              />
             </div>
           </div>
         </div>
-        <div className="px-4 pt-8 pb-16 border-y md:px-16 bg-bgColors-900 md:pb-24 md:pt-12 border-divider">
+        <div className="px-4 pt-8 pb-16 border-y md:px-16 bg-bgColors-800 md:pb-24 md:pt-12 border-divider">
           {/* FIX:  avatarImageUrl={user.portfolioImages[0]} and dynamicImageUrl={user.profilePicture}*/}
           <div className="w-full max-w-[90rem] mx-auto">
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
-              {filteredUsers.length < 1 &&
+              {filteredUsers.length === 0 &&
                 !isSearching &&
                 userProfiles.map((user) => (
                   <CardElement
@@ -155,6 +164,8 @@ export const Home = () => {
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
+                    personalWebsite={user.actions.viewWebsite}
+                    portfolio={user.actions.viewPortfolio}
                   />
                 ))}
               {filteredUsers.length > 0 &&
@@ -167,6 +178,8 @@ export const Home = () => {
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
+                    personalWebsite={user.actions.viewWebsite}
+                    portfolio={user.actions.viewPortfolio}
                   />
                 ))}
               {isSearching && <SkeletonCard numberOfCards={9} />}
@@ -175,6 +188,7 @@ export const Home = () => {
               <Button
                 type="button"
                 className="bg-[#FFB512]  font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
+                onClick={() => navigate("/portfolio")}
               >
                 Ver todos los portafolios
                 <span className="ml-[0.625rem]">

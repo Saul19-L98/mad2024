@@ -7,9 +7,13 @@ import { userProfiles } from "@/data/users/portfolio.mock";
 
 interface SearchbarProps {
   className?: string;
+  isFromHome?: boolean;
 }
 
-export const Searchbar: React.FC<SearchbarProps> = ({ className }) => {
+export const Searchbar: React.FC<SearchbarProps> = ({
+  className,
+  isFromHome = false,
+}) => {
   const [searchQuery, setSearchQuery] = useState("");
   const { setFilteredUsers, setIsSearching } = useHomeStore();
 
@@ -24,12 +28,17 @@ export const Searchbar: React.FC<SearchbarProps> = ({ className }) => {
     }
     setSearchQuery(e.target.value);
     console.log(e.target.value); // Log what is being typed
+
     const filteredUsers = userProfiles.filter((user) =>
       user.name.toLowerCase().includes(inputUserName)
     );
     console.log(filteredUsers);
     if (filteredUsers.length > 0) {
-      setFilteredUsers(filteredUsers);
+      if (isFromHome) {
+        setFilteredUsers(filteredUsers.slice(0, 9));
+      } else {
+        setFilteredUsers(filteredUsers);
+      }
       setTimeout(() => {
         setIsSearching(false);
       }, 1000);

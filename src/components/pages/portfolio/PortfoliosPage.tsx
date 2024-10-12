@@ -10,11 +10,21 @@ import { useHomeStore } from "@/store/home.store";
 // import { userProfiles } from "@/data/users/portfolio.mock";
 import { Pagination } from "@/components/pages/portfolio/components/Pagination";
 import { usePaginationStore } from "@/store/pagination.store";
+import { UserProfile } from "@/types/users.type";
+import { userProfiles } from "@/data/users/portfolio.mock";
+import { useBadgeStore } from "@/store/badge.store";
 
 export const PortfoliosPage = () => {
-  const { filteredUsers, isSearching } = useHomeStore();
-  const { currentContent } = usePaginationStore();
+  const { filteredUsers, isSearching, setBadgesFilter, setFilteredUsers } =
+    useHomeStore();
+  const { currentContent, setCurrentContent } = usePaginationStore();
   console.log("portfolio current", currentContent);
+  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+    const res = usersObject.filter((user) => user.role.id === roleId);
+    console.log("filtered", res);
+    return res;
+  };
+  const { setActiveBadge } = useBadgeStore();
   return (
     <Layout>
       <section className="w-full">
@@ -35,7 +45,24 @@ export const PortfoliosPage = () => {
                     isMain
                     key={item.id}
                     data={item}
-                    callToAction={() => console.log(`Clicked ${item.name}`)}
+                    callToAction={() => {
+                      console.log(item.id);
+                      if (item.id === 0) {
+                        setBadgesFilter([]);
+                        setCurrentContent(userProfiles);
+                        setFilteredUsers(userProfiles);
+                        setActiveBadge(item.id);
+                        return;
+                      }
+                      const filteredUsers = getUsersByRoleId(
+                        userProfiles,
+                        item.id
+                      );
+                      setActiveBadge(item.id);
+                      setBadgesFilter(filteredUsers);
+                      setFilteredUsers(filteredUsers);
+                      setCurrentContent(filteredUsers);
+                    }}
                   />
                 ))}
               </div>
@@ -43,11 +70,11 @@ export const PortfoliosPage = () => {
             </div>
           </div>
         </div>
-        <div className="px-4 pt-8 pb-16 border-y md:px-16 bg-bgColors-900 md:pb-24 md:pt-12 border-divider">
+        <div className="min-h-screen px-4 pt-8 pb-16 border-y md:px-16 bg-bgColors-800 md:pb-24 md:pt-12 border-divider">
           {/* FIX:  avatarImageUrl={user.portfolioImages[0]} and dynamicImageUrl={user.profilePicture}*/}
           <div className="w-full max-w-[90rem] mx-auto">
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
-              {filteredUsers.length < 1 &&
+              {filteredUsers.length == 0 &&
                 !isSearching &&
                 currentContent.map((user) => (
                   <CardElement
@@ -57,6 +84,8 @@ export const PortfoliosPage = () => {
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
+                    personalWebsite={user.actions.viewWebsite}
+                    portfolio={user.actions.viewPortfolio}
                   />
                 ))}
               {filteredUsers.length > 0 &&
@@ -69,20 +98,13 @@ export const PortfoliosPage = () => {
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
+                    personalWebsite={user.actions.viewWebsite}
+                    portfolio={user.actions.viewPortfolio}
                   />
                 ))}
               {isSearching && <SkeletonCard numberOfCards={9} />}
             </div>
             <div className="flex flex-row justify-center w-full mt-24">
-              {/* <Button
-                type="button"
-                className="bg-[#FFB512]  font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
-              >
-                Ver todos los portafolios
-                <span className="ml-[0.625rem]">
-                  <IArrow />
-                </span>
-              </Button> */}
               <Pagination userProfiles={filteredUsers} />
             </div>
           </div>

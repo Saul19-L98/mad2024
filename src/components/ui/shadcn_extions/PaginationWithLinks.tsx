@@ -65,7 +65,7 @@ export function PaginationWithLinks({
       window.scrollTo({ top: 0, behavior: "smooth" });
       return `?${newSearchParams.toString()}`;
     },
-    [searchParams, pathname]
+    [searchParams, pathname, pageSearchParam]
   );
 
   const navToPageSize = useCallback(
@@ -157,7 +157,7 @@ export function PaginationWithLinks({
         </div>
       )}
       <Pagination className={cn({ "md:justify-end": pageSizeSelectOptions })}>
-        <PaginationContent className="max-sm:gap-0">
+        <PaginationContent className="max-sm:gap-2">
           <PaginationItem>
             <PaginationPrevious
               to={buildLink(Math.max(page - 1, 1))}
