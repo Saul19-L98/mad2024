@@ -21,10 +21,27 @@ export const PortfoliosPage = () => {
   console.log("portfolio current", currentContent);
   const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
-    console.log("filtered", res);
     return res;
   };
-  const { setActiveBadge } = useBadgeStore();
+  console.log("current content from portfolio", currentContent);
+  const selectBadge = (idBadge: number) => {
+    if (idBadge === 0) {
+      setBadgesFilter([]);
+      setCurrentContent(userProfiles);
+      setFilteredUsers(userProfiles);
+      setActiveBadge(idBadge);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
+    setActiveBadge(idBadge);
+    setBadgesFilter(filteredUsers);
+    setFilteredUsers(filteredUsers);
+    setCurrentContent(filteredUsers);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const { setActiveBadge, activeBadge } = useBadgeStore();
+  console.log("active badge", activeBadge);
   return (
     <Layout>
       <section className="w-full">
@@ -45,24 +62,7 @@ export const PortfoliosPage = () => {
                     isMain
                     key={item.id}
                     data={item}
-                    callToAction={() => {
-                      console.log(item.id);
-                      if (item.id === 0) {
-                        setBadgesFilter([]);
-                        setCurrentContent(userProfiles);
-                        setFilteredUsers(userProfiles);
-                        setActiveBadge(item.id);
-                        return;
-                      }
-                      const filteredUsers = getUsersByRoleId(
-                        userProfiles,
-                        item.id
-                      );
-                      setActiveBadge(item.id);
-                      setBadgesFilter(filteredUsers);
-                      setFilteredUsers(filteredUsers);
-                      setCurrentContent(filteredUsers);
-                    }}
+                    callToAction={() => selectBadge(item.id)}
                   />
                 ))}
               </div>

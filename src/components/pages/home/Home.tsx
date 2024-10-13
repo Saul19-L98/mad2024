@@ -17,20 +17,92 @@ import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { mainTags } from "@/data/tags/tags.optins";
 import { Searchbar } from "@/components/common/pages/Searchbar";
 import { userProfiles } from "@/data/users/users.mock";
+import { userProfiles as usersMainData } from "@/data/users/portfolio.mock";
 import { CardElement } from "@/components/common/CardElement";
 import { Button } from "@/components/ui/button";
 import { IArrow } from "@/assets/Icons/symbols/IArrow";
 import { SkeletonCard } from "@/components/common/pages/SkeletonCards";
 import { useHomeStore } from "@/store/home.store";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useBadgeStore } from "@/store/badge.store";
+import { usePaginationStore } from "@/store/pagination.store";
+import { UserProfile } from "@/types/users.type";
 
 export const Home = () => {
-  const { filteredUsers, isSearching, setFilteredUsers } = useHomeStore();
+  const { filteredUsers, isSearching, setFilteredUsers, setBadgesFilter } =
+    useHomeStore();
   const navigate = useNavigate();
+  const { setActiveBadge } = useBadgeStore();
+  const { setCurrentContent } = usePaginationStore();
   useEffect(() => {
     setFilteredUsers([]);
+    setActiveBadge(0);
   }, []);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]); // Refs for each card
+
+  useEffect(() => {
+    // Define the intersection observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            const backgroundImage = target.getAttribute("data-bg");
+            if (backgroundImage) {
+              target.style.backgroundImage = `url(${backgroundImage})`;
+              observer.unobserve(target); // Stop observing once image is loaded
+            }
+          }
+        });
+      },
+      { rootMargin: "0px 0px 200px 0px" } // Load slightly before the image enters the viewport
+    );
+
+    // Observe all card elements
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    // Cleanup the observer when the component is unmounted
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+    const res = usersObject.filter((user) => user.role.id === roleId);
+    return res;
+  };
+  const resetAndNavigate = (idBadge: number, users: UserProfile[]) => {
+    setBadgesFilter([]);
+    setCurrentContent(users);
+    setFilteredUsers(users);
+    setActiveBadge(idBadge);
+    navigate("/portfolio");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const selectBadge = (idBadge: number) => {
+    if (idBadge === 0) {
+      resetAndNavigate(idBadge, userProfiles);
+      return;
+    }
+    console.log("users and idBadge 🐒", userProfiles, idBadge);
+    const filteredUsers = getUsersByRoleId(usersMainData, idBadge);
+    if (filteredUsers.length === 0) {
+      resetAndNavigate(idBadge, userProfiles);
+      return;
+    }
+    setActiveBadge(idBadge);
+    setBadgesFilter(filteredUsers);
+    setFilteredUsers(filteredUsers);
+    setCurrentContent(filteredUsers);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/portfolio");
+  };
   return (
     <main className="flex flex-col items-center justify-start w-full min-h-screen gap-12">
       <section className="w-full max-w-[90rem] px-4 pt-6 pb-4">
@@ -66,21 +138,27 @@ export const Home = () => {
         <div className="w-full h-[33.5rem] lg:h-96 pt-12">
           <div className="h-full bg-[#131A35]">
             <div className="w-full h-full mx-auto">
-              <div className="grid h-full grid-cols-2 grid-rows-4 gap-2 lg:grid-cols-4 lg:grid-rows-2 sm:gap-4 md:p-4 md:border md:border-[#1CCFFA] rounded-[2rem] md:shadow-custom-main-shadow">
-                {tagsHomeTable.map((item) => (
+              <div className="grid h-full grid-cols-2 bg-transparent md:bg-[#09051F] grid-rows-4 gap-2 lg:grid-cols-4 lg:grid-rows-2 sm:gap-4 md:p-4 md:border md:border-[#1CCFFA] rounded-[2rem] md:shadow-custom-main-shadow">
+                {tagsHomeTable.map((item, index) => (
                   <div
                     key={item.id}
                     className={cn(
-                      "bg-white p-4 sm:p-6 rounded-lg col-span-1 flex items-end justify-start",
+                      "relative p-4 sm:p-6 rounded-lg col-span-1 flex items-end justify-start bg-cover bg-center bg-no-repeat hover:cursor-pointer hover:opacity-75",
                       {
                         ["col-span-2 row-span-1 lg:col-span-1 lg:row-span-2"]:
                           item.id === 0,
                       }
                     )}
+                    data-bg={`./images/coverBadge${index}.jpg`} // Data attribute for lazy loading
+                    ref={(el) => (cardRefs.current[index] = el)} // Store ref to each card
+                    // style={{
+                    //   backgroundImage: `url(./images/coverBadge${index}.jpg)`,
+                    // }}
+                    onClick={() => selectBadge(item.id)}
                   >
                     <p
                       className={cn(
-                        "w-full text-sm min-[420px]:text-lg md:text-[1.75rem] font-semibold leading-7 tracking-tight font-poppins",
+                        "w-full text-sm min-[420px]:text-lg md:text-[1.75rem] text-[#F4F8FB] font-semibold leading-7 tracking-tight font-poppins",
                         {
                           ["flex flex-row justify-start items-center"]:
                             item.id === 0,
@@ -139,7 +217,9 @@ export const Home = () => {
                     isMain
                     key={item.id}
                     data={item}
-                    callToAction={() => navigate("/portfolio")}
+                    callToAction={() => {
+                      selectBadge(item.id);
+                    }}
                   />
                 ))}
               </div>
