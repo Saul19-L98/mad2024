@@ -10,9 +10,41 @@ import {
 } from "@/assets/Icons/main/IconsIndex";
 import { tagsFooter } from "@/data/tags/tags.optins";
 import { useNavigate, Link } from "react-router-dom";
+import { useHomeStore } from "@/store/home.store";
+import { useBadgeStore } from "@/store/badge.store";
+import { usePaginationStore } from "@/store/pagination.store";
+import { UserProfile } from "@/types/users.type";
+import { userProfiles } from "@/data/users/portfolio.mock";
 export const Footer = () => {
   // const [currentFilter, setCurrentFilter] = useState<number | null>(null);
   const navigate = useNavigate();
+  const { setCurrentContent } = usePaginationStore();
+  const { setFilteredUsers, setBadgesFilter } = useHomeStore();
+  const { setActiveBadge } = useBadgeStore();
+  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+    const res = usersObject.filter((user) => user.role.id === roleId);
+    return res;
+  };
+  const resetAndNavigate = (
+    idBadge: number,
+    users: UserProfile[],
+    isFiltered: boolean
+  ) => {
+    setActiveBadge(idBadge);
+    setFilteredUsers(users);
+    setBadgesFilter(isFiltered ? users : []);
+    setCurrentContent(users);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const selectBadge = (idBadge: number) => {
+    if (idBadge === 0) {
+      resetAndNavigate(idBadge, userProfiles, false);
+      return;
+    }
+    const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
+    resetAndNavigate(idBadge, filteredUsers, true);
+    navigate("/portfolio?page=1");
+  };
   return (
     <footer className="flex flex-col items-center w-full bg-white">
       <div className="w-full max-w-[90rem] px-4 py-12 sm:px-16">
@@ -103,7 +135,7 @@ export const Footer = () => {
                   <ResourceTypeBadge
                     key={item.id}
                     data={item}
-                    callToAction={() => console.log(`Clicked ${item.name}`)}
+                    callToAction={() => selectBadge(item.id)}
                   />
                 ))}
               </div>

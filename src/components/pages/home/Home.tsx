@@ -76,32 +76,30 @@ export const Home = () => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
-  const resetAndNavigate = (idBadge: number, users: UserProfile[]) => {
-    setBadgesFilter([]);
-    setCurrentContent(users);
-    setFilteredUsers(users);
+  const resetAndNavigate = (
+    idBadge: number,
+    users: UserProfile[],
+    isFiltered: boolean
+  ) => {
     setActiveBadge(idBadge);
-    navigate("/portfolio");
+    setFilteredUsers(users);
+    setBadgesFilter(isFiltered ? users : []);
+    setCurrentContent(users);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/portfolio");
   };
 
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, userProfiles);
+      resetAndNavigate(idBadge, userProfiles, false);
       return;
     }
-    console.log("users and idBadge 🐒", userProfiles, idBadge);
     const filteredUsers = getUsersByRoleId(usersMainData, idBadge);
     if (filteredUsers.length === 0) {
-      resetAndNavigate(idBadge, userProfiles);
+      resetAndNavigate(idBadge, userProfiles, false);
       return;
     }
-    setActiveBadge(idBadge);
-    setBadgesFilter(filteredUsers);
-    setFilteredUsers(filteredUsers);
-    setCurrentContent(filteredUsers);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate("/portfolio");
+    resetAndNavigate(idBadge, filteredUsers, true);
   };
   return (
     <main className="flex flex-col items-center justify-start w-full min-h-screen gap-12">

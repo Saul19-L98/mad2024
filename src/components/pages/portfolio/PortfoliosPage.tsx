@@ -13,6 +13,7 @@ import { usePaginationStore } from "@/store/pagination.store";
 import { UserProfile } from "@/types/users.type";
 import { userProfiles } from "@/data/users/portfolio.mock";
 import { useBadgeStore } from "@/store/badge.store";
+import { useNavigate } from "react-router-dom";
 
 export const PortfoliosPage = () => {
   const { filteredUsers, isSearching, setBadgesFilter, setFilteredUsers } =
@@ -24,24 +25,28 @@ export const PortfoliosPage = () => {
     return res;
   };
   console.log("current content from portfolio", currentContent);
+  const navigate = useNavigate();
+  const resetAndNavigate = (
+    idBadge: number,
+    users: UserProfile[],
+    isFiltered: boolean
+  ) => {
+    setActiveBadge(idBadge);
+    setFilteredUsers(users);
+    setBadgesFilter(isFiltered ? users : []);
+    setCurrentContent(users);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      setBadgesFilter([]);
-      setCurrentContent(userProfiles);
-      setFilteredUsers(userProfiles);
-      setActiveBadge(idBadge);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      resetAndNavigate(idBadge, userProfiles, false);
       return;
     }
     const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
-    setActiveBadge(idBadge);
-    setBadgesFilter(filteredUsers);
-    setFilteredUsers(filteredUsers);
-    setCurrentContent(filteredUsers);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    resetAndNavigate(idBadge, filteredUsers, true);
+    navigate("/portfolio?page=1");
   };
-  const { setActiveBadge, activeBadge } = useBadgeStore();
-  console.log("active badge", activeBadge);
+  const { setActiveBadge } = useBadgeStore();
   return (
     <Layout>
       <section className="w-full">
