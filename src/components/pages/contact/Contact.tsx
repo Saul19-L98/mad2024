@@ -16,6 +16,11 @@ import {
   IPcWhite,
 } from "@/assets/Icons/main/IconsIndex";
 import { Button } from "@/components/ui/button";
+import {
+  SkeletonContactUserData,
+  SkeletonContactUserImage,
+  SkeletonContactUserPortfolio,
+} from "@/components/common/pages/SkeletonCards";
 
 interface CustomFigureProps {
   name?: string;
@@ -67,13 +72,16 @@ export const Contact = () => {
     useState<UserProfile | null>(null);
   const { contactId } = useParams();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    setIsLoading(true);
     if (!contactId || isNaN(parseInt(contactId)) || parseInt(contactId) < 1) {
       navigate("/portfolio");
       return;
     }
     const user = userProfiles.find((user) => user.id === parseInt(contactId));
     if (user) {
+      setIsLoading(false);
       setCurrentContactContent(user);
     } else {
       navigate("/portfolio");
@@ -117,99 +125,177 @@ export const Contact = () => {
       </div>
 
       {/* Content Section */}
-      <section className="relative max-w-[90rem] z-10 min-h-screen px-4 py-16 lg:py-24 lg:pl-16 lg:pr-0 bg-transparent">
+      <section className="relative w-full max-w-[90rem] z-10 min-h-screen px-4 py-16 lg:py-24 lg:pl-16 lg:pr-0 bg-transparent">
         <div className="grid h-full grid-cols-1 gap-x-16 gap-y-16 xl:grid-cols-3 justify-items-center">
-          <section className="flex items-center justify-center w-full h-full">
-            <CustomFigure
-              name={currentContactContent?.name}
-              badge={currentContactContent?.role}
-              profilePicture={currentContactContent?.profilePicture}
-              className="col-span-1"
-            />
-          </section>
-          <section className="flex flex-col items-center justify-center w-full col-span-1">
-            <div className="flex flex-col items-start justify-center gap-8 lg:gap-16">
-              <div className="flex flex-row flex-wrap justify-start w-full gap-2 h-fit ">
-                {currentContactContent?.tags.map((tag) => (
-                  <ResourceTypeBadge
-                    key={tag.id}
-                    data={tag}
-                    isMain
-                    callToAction={() => selectBadge(tag.id)}
-                  />
-                ))}
-              </div>
-              <div className="flex flex-col items-start justify-center gap-8 text-start md:gap-4">
-                <h1 className="text-2xl font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
-                  {currentContactContent?.name}
-                </h1>
-                <p className="text-sm font-semibold leading-5 font-poppins text-fontcolors-200">
-                  {currentContactContent?.bio}
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center w-full gap-8 lg:items-start text-start lg:gap-4">
-                <h2 className="text-lg font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
-                  Sígueme en:
-                </h2>
-                <div className="">
-                  <ul className="flex flex-row justify-start gap-6">
-                    {currentContactContent?.socialLinks.instagram && (
-                      <li>
-                        <Link
-                          to={currentContactContent?.socialLinks.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="Facebook"
-                          className="hover:opacity-75"
-                        >
-                          <IInstagramWhite />
-                        </Link>
-                      </li>
+          {isLoading ? (
+            <SkeletonContactUserImage />
+          ) : (
+            <section className="flex items-center justify-center w-full h-full col-span-1">
+              <CustomFigure
+                name={currentContactContent?.name}
+                badge={currentContactContent?.role}
+                profilePicture={currentContactContent?.profilePicture}
+                // className="col-span-1"
+              />
+            </section>
+          )}
+          {isLoading ? (
+            <SkeletonContactUserData />
+          ) : (
+            <section className="flex flex-col items-center justify-center w-full col-span-1">
+              <div className="flex flex-col items-start justify-center gap-8 lg:gap-16">
+                <div className="flex flex-row flex-wrap justify-start w-full gap-2 h-fit ">
+                  {currentContactContent?.tags.map((tag) => (
+                    <ResourceTypeBadge
+                      key={tag.id}
+                      data={tag}
+                      isMain
+                      callToAction={() => selectBadge(tag.id)}
+                    />
+                  ))}
+                </div>
+                <div className="flex flex-col items-start justify-center gap-8 text-start md:gap-4">
+                  <h1 className="text-2xl font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
+                    {currentContactContent?.name}
+                  </h1>
+                  <p className="text-sm font-semibold leading-5 font-poppins text-fontcolors-200">
+                    {currentContactContent?.bio}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center w-full gap-8 lg:items-start text-start lg:gap-4">
+                  <h2 className="text-lg font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
+                    Sígueme en:
+                  </h2>
+                  <div className="">
+                    <ul className="flex flex-row justify-start gap-6">
+                      {currentContactContent?.socialLinks.instagram && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="hover:opacity-75"
+                            aria-labelledby="Instagram"
+                          >
+                            <IInstagramWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.behance && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.behance}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            className="hover:opacity-75"
+                          >
+                            <IBehanceWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.facebook && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="hover:opacity-75"
+                          >
+                            <IFacebookWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.linkedin && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="hover:opacity-75"
+                          >
+                            <ILinkedinWhite />
+                          </Link>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+                <div className="flex-col items-start justify-center hidden w-full gap-2 lg:flex">
+                  <div className="w-full xl:w-[18.875rem] flex flex-col justify-center gap-2">
+                    {currentContactContent?.actions.viewPortfolio && (
+                      <Button
+                        className="w-full font-semibold text-start font-poppins bg-text-main-gradient hover:bg-default-bg"
+                        onClick={() => {
+                          const portfolioUrl =
+                            currentContactContent?.actions.viewPortfolio;
+                          if (portfolioUrl) {
+                            window.location.href = portfolioUrl;
+                          }
+                        }}
+                      >
+                        <span className="mr-2">
+                          <IBookWhite />
+                        </span>
+                        Ver portafolio
+                      </Button>
                     )}
-                    {currentContactContent?.socialLinks.behance && (
-                      <li>
-                        <Link
-                          to={currentContactContent?.socialLinks.behance}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="Instagram"
-                          className="hover:opacity-75"
-                        >
-                          <IBehanceWhite />
-                        </Link>
-                      </li>
+                    {currentContactContent?.actions.viewWebsite && (
+                      <Button
+                        className="flex items-center justify-center w-full px-4 py-2 text-black bg-white rounded-md shadow-lg hover:opacity-75 hover:bg-white"
+                        onClick={() => {
+                          if (currentContactContent?.actions.viewWebsite) {
+                            window.location.href =
+                              currentContactContent.actions.viewWebsite;
+                          }
+                        }}
+                      >
+                        <span className="mr-2">
+                          <IPcWhite />
+                        </span>
+                        Ver página web
+                      </Button>
                     )}
-                    {currentContactContent?.socialLinks.facebook && (
-                      <li>
-                        <Link
-                          to={currentContactContent?.socialLinks.facebook}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="LinkedIn"
-                          className="hover:opacity-75"
-                        >
-                          <IFacebookWhite />
-                        </Link>
-                      </li>
+                    {currentContactContent?.actions.downloadCV && (
+                      <Button
+                        className="w-full px-4 py-2 font-semibold text-center text-transparent font-poppins button-gradient-text border border-[#250F8B] hover:border-[#1CCFFA]"
+                        onClick={() => {
+                          const link = document.createElement("a");
+                          link.href =
+                            currentContactContent?.actions?.downloadCV?.replace(
+                              "view",
+                              "uc?export=download&id="
+                            ) || "";
+                          link.setAttribute("download", "CV.pdf"); // Optional: Set the name of the downloaded file
+                          document.body.appendChild(link);
+                          link.click();
+                          link.remove();
+                        }}
+                      >
+                        Descargar CV
+                      </Button>
                     )}
-                    {currentContactContent?.socialLinks.linkedin && (
-                      <li>
-                        <Link
-                          to={currentContactContent?.socialLinks.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="LinkedIn"
-                          className="hover:opacity-75"
-                        >
-                          <ILinkedinWhite />
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
+                  </div>
                 </div>
               </div>
-              <div className="flex-col items-start justify-center hidden w-full gap-2 lg:flex">
-                <div className="w-full xl:w-[18.875rem] flex flex-col justify-center gap-2">
+            </section>
+          )}
+          {isLoading ? (
+            <SkeletonContactUserPortfolio />
+          ) : (
+            <section className="flex flex-col items-center justify-center w-full h-full col-span-1 lg:flex-row xl:col-span-1">
+              <figure className="w-full h-full max-h-[33.68rem] max-w-80 sm:max-w-2xl lg:max-w-3xl ">
+                <img
+                  className="object-cover w-full h-full rounded-l-lg"
+                  src={currentContactContent?.portfolioImages[0]}
+                  alt="design iamge"
+                />
+              </figure>
+              <div className="flex flex-col items-start justify-center w-full gap-2 mt-16 lg:hidden">
+                <div className="w-full lg:w-[18.875rem] flex flex-col justify-center gap-2">
                   {currentContactContent?.actions.viewPortfolio && (
                     <Button
                       className="w-full font-semibold text-start font-poppins bg-text-main-gradient hover:bg-default-bg"
@@ -264,73 +350,8 @@ export const Contact = () => {
                   )}
                 </div>
               </div>
-            </div>
-          </section>
-          <section className="flex flex-col items-center justify-center w-full h-full col-span-1 lg:flex-row xl:col-span-1">
-            <figure className="w-full h-full max-h-[33.68rem] max-w-80 sm:max-w-2xl lg:max-w-3xl ">
-              <img
-                className="object-cover w-full h-full rounded-l-lg"
-                src={currentContactContent?.portfolioImages[0]}
-                alt="design iamge"
-              />
-            </figure>
-            <div className="flex flex-col items-start justify-center w-full gap-2 mt-2 lg:hidden">
-              <div className="w-full lg:w-[18.875rem] flex flex-col justify-center gap-2">
-                {currentContactContent?.actions.viewPortfolio && (
-                  <Button
-                    className="w-full font-semibold text-start font-poppins bg-text-main-gradient hover:bg-default-bg"
-                    onClick={() => {
-                      const portfolioUrl =
-                        currentContactContent?.actions.viewPortfolio;
-                      if (portfolioUrl) {
-                        window.location.href = portfolioUrl;
-                      }
-                    }}
-                  >
-                    <span className="mr-2">
-                      <IBookWhite />
-                    </span>
-                    Ver portafolio
-                  </Button>
-                )}
-                {currentContactContent?.actions.viewWebsite && (
-                  <Button
-                    className="flex items-center justify-center w-full px-4 py-2 text-black bg-white rounded-md shadow-lg hover:opacity-75 hover:bg-white"
-                    onClick={() => {
-                      if (currentContactContent?.actions.viewWebsite) {
-                        window.location.href =
-                          currentContactContent.actions.viewWebsite;
-                      }
-                    }}
-                  >
-                    <span className="mr-2">
-                      <IPcWhite />
-                    </span>
-                    Ver página web
-                  </Button>
-                )}
-                {currentContactContent?.actions.downloadCV && (
-                  <Button
-                    className="w-full px-4 py-2 font-semibold text-center text-transparent font-poppins button-gradient-text border border-[#250F8B] hover:border-[#1CCFFA]"
-                    onClick={() => {
-                      const link = document.createElement("a");
-                      link.href =
-                        currentContactContent?.actions?.downloadCV?.replace(
-                          "view",
-                          "uc?export=download&id="
-                        ) || "";
-                      link.setAttribute("download", "CV.pdf"); // Optional: Set the name of the downloaded file
-                      document.body.appendChild(link);
-                      link.click();
-                      link.remove();
-                    }}
-                  >
-                    Descargar CV
-                  </Button>
-                )}
-              </div>
-            </div>
-          </section>
+            </section>
+          )}
         </div>
       </section>
     </main>
