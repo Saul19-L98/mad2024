@@ -147,7 +147,7 @@ export const Contact = () => {
                   {currentContactContent?.bio}
                 </p>
               </div>
-              <div className="flex flex-col items-center justify-center w-full gap-8 md:items-start text-start md:gap-4">
+              <div className="flex flex-col items-center justify-center w-full gap-8 lg:items-start text-start lg:gap-4">
                 <h2 className="text-lg font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
                   Sígueme en:
                 </h2>
@@ -208,7 +208,7 @@ export const Contact = () => {
                   </ul>
                 </div>
               </div>
-              <div className="flex-col items-start justify-center hidden w-full gap-2 md:flex">
+              <div className="flex-col items-start justify-center hidden w-full gap-2 lg:flex">
                 <div className="w-full xl:w-[18.875rem] flex flex-col justify-center gap-2">
                   {currentContactContent?.actions.viewPortfolio && (
                     <Button
@@ -266,7 +266,7 @@ export const Contact = () => {
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center w-full h-full col-span-1 md:flex-row xl:col-span-1">
+          <section className="flex flex-col items-center justify-center w-full h-full col-span-1 lg:flex-row xl:col-span-1">
             <figure className="w-full h-full max-h-[33.68rem] max-w-80 sm:max-w-2xl lg:max-w-3xl ">
               <img
                 className="object-cover w-full h-full rounded-l-lg"
@@ -274,7 +274,7 @@ export const Contact = () => {
                 alt="design iamge"
               />
             </figure>
-            <div className="flex flex-col items-start justify-center w-full gap-2 mt-2 md:hidden">
+            <div className="flex flex-col items-start justify-center w-full gap-2 mt-2 lg:hidden">
               <div className="w-full lg:w-[18.875rem] flex flex-col justify-center gap-2">
                 {currentContactContent?.actions.viewPortfolio && (
                   <Button

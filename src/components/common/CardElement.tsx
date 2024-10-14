@@ -37,6 +37,7 @@ export const CardElement: React.FC<CardElementProps> = ({
     <Card
       className="relative w-auto col-span-1 overflow-hidden bg-transparent border-none hover:cursor-pointer hover:opacity-75 group"
       onClick={() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
         navigate(`/contact/${userId}`);
       }}
     >
@@ -59,11 +60,9 @@ export const CardElement: React.FC<CardElementProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.5rem]"
-              // onClick={(e) => {
-              //   e.preventDefault();
-              //   e.stopPropagation(); // Prevents card click event
-              //   console.log(`Clicked ${name}'s personal website`);
-              // }}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevents card click event
+              }}
             >
               <span className="mr-2">
                 <IPersonalWeb />
@@ -75,11 +74,9 @@ export const CardElement: React.FC<CardElementProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.25rem]"
-              // onClick={(e) => {
-              //   e.preventDefault();
-              //   e.stopPropagation(); // Prevents card click event
-              //   console.log(`Clicked ${name}'s portfolio`);
-              // }}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevents card click event
+              }}
             >
               <span className="mr-2">
                 <IPortfolio />
