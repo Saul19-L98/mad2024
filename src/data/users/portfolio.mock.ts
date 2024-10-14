@@ -19,9 +19,16 @@ export const userProfiles = [
     actions: {
       viewPortfolio: "#", // URL to view the portfolio
       viewWebsite: "#", // URL to view the personal website
-      downloadCV: "#", // URL to download the CV
+      // downloadCV:
+      //   "https://drive.google.com/file/d/1L8TmmeNkGrsYGyPbh63F0I9Va9r52pFH/view?usp=drive_link", // URL to download the CV
+      downloadCV:
+        "https://drive.google.com/uc?export=download&id=1L8TmmeNkGrsYGyPbh63F0I9Va9r52pFH",
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 2,
@@ -45,7 +52,10 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 3,
@@ -69,7 +79,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 4,
@@ -93,7 +107,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+      { id: 5, name: "Multimedia", href: "#" },
+    ],
   },
   {
     id: 5,
@@ -117,7 +135,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 6,
@@ -141,7 +163,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 7,
@@ -165,7 +191,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 8,
@@ -189,7 +219,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 9,
@@ -213,7 +247,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 10,
@@ -237,7 +275,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 11,
@@ -261,7 +303,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 12,
@@ -285,7 +331,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 13,
@@ -309,7 +359,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 14,
@@ -333,7 +387,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 15,
@@ -357,7 +415,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 16,
@@ -381,7 +443,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 17,
@@ -405,7 +471,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 18,
@@ -429,7 +499,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 19,
@@ -453,7 +527,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 20,
@@ -477,7 +555,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 21,
@@ -501,7 +583,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 22,
@@ -525,7 +611,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 23,
@@ -549,7 +639,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 24,
@@ -573,7 +667,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 25,
@@ -597,7 +695,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 26,
@@ -621,7 +723,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 27,
@@ -645,7 +751,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 28,
@@ -669,7 +779,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 29,
@@ -693,7 +807,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 30,
@@ -717,7 +835,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 31,
@@ -741,7 +863,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 32,
@@ -765,7 +891,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 33,
@@ -789,7 +919,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 34,
@@ -813,7 +947,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 35,
@@ -837,7 +975,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 36,
@@ -861,7 +1003,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 37,
@@ -885,7 +1031,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 38,
@@ -909,7 +1059,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 39,
@@ -933,7 +1087,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 40,
@@ -957,7 +1115,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 41,
@@ -981,7 +1143,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 42,
@@ -1005,7 +1171,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 43,
@@ -1029,7 +1199,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 44,
@@ -1053,7 +1227,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 45,
@@ -1077,7 +1255,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 46,
@@ -1101,7 +1283,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 47,
@@ -1125,7 +1311,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 48,
@@ -1149,7 +1339,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 49,
@@ -1173,7 +1367,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 50,
@@ -1197,7 +1395,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 51,
@@ -1221,7 +1423,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 52,
@@ -1245,7 +1451,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 53,
@@ -1269,7 +1479,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 54,
@@ -1293,7 +1507,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 55,
@@ -1317,7 +1535,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 56,
@@ -1341,7 +1563,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 57,
@@ -1365,7 +1591,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 58,
@@ -1389,7 +1619,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 59,
@@ -1413,7 +1647,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 60,
@@ -1437,7 +1675,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 61,
@@ -1461,7 +1703,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 62,
@@ -1485,7 +1731,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 63,
@@ -1509,7 +1759,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 64,
@@ -1533,7 +1787,23 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      {
+        id: 2,
+        name: "Diseño UX/UI",
+        href: "#",
+      },
+      {
+        id: 3,
+        name: "Branding",
+        href: "#",
+      },
+      {
+        id: 4,
+        name: "Ilustración",
+        href: "#",
+      },
+    ],
   },
   {
     id: 65,
@@ -1557,7 +1827,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 66,
@@ -1581,7 +1855,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 67,
@@ -1605,7 +1883,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 68,
@@ -1629,7 +1911,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 69,
@@ -1653,7 +1939,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 70,
@@ -1677,7 +1967,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 71,
@@ -1701,7 +1995,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 72,
@@ -1725,7 +2023,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 73,
@@ -1749,7 +2051,23 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      {
+        id: 2,
+        name: "Diseño UX/UI",
+        href: "#",
+      },
+      {
+        id: 3,
+        name: "Branding",
+        href: "#",
+      },
+      {
+        id: 4,
+        name: "Ilustración",
+        href: "#",
+      },
+    ],
   },
   {
     id: 74,
@@ -1773,7 +2091,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 75,
@@ -1797,7 +2119,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 76,
@@ -1821,7 +2147,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Ilustración", "Branding"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 77,
@@ -1845,7 +2175,11 @@ export const userProfiles = [
       viewWebsite: "#",
       downloadCV: "#",
     },
-    tags: ["Branding", "UX/UI"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 78,
@@ -1869,7 +2203,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 79,
@@ -1893,7 +2231,11 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
   {
     id: 80,
@@ -1917,7 +2259,12 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+      { id: 5, name: "Editorial", href: "#" },
+    ],
   },
   {
     id: 81,
@@ -1941,6 +2288,10 @@ export const userProfiles = [
       viewWebsite: "#", // URL to view the personal website
       downloadCV: "#", // URL to download the CV
     },
-    tags: ["Diseño UX/UI", "Branding", "Ilustración"],
+    tags: [
+      { id: 2, name: "Diseño UX/UI", href: "#" },
+      { id: 3, name: "Branding", href: "#" },
+      { id: 4, name: "Ilustración", href: "#" },
+    ],
   },
 ];

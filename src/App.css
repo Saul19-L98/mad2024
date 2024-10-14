@@ -124,6 +124,15 @@
     display: flex;
     justify-content: center;
   }
+  .button-gradient-text {
+    background-color: #131A35;
+    /* Background color for the button */
+    background: linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   /* .border-gradient {
     position: relative;
     border-radius: 1rem;

@@ -4,7 +4,7 @@ import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { IRightTopArrow } from "@/assets/Icons/symbols/IRightTopArrow";
 import { IPortfolio } from "@/assets/Icons/symbols/IPortfolio";
 import { IPersonalWeb } from "@/assets/Icons/symbols/IPersonalWeb";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface BadgeData {
   id: number;
@@ -12,6 +12,7 @@ interface BadgeData {
 }
 
 interface CardElementProps {
+  userId: number;
   avatarImageUrl: string;
   avatarFallback: string;
   name: string;
@@ -22,6 +23,7 @@ interface CardElementProps {
 }
 
 export const CardElement: React.FC<CardElementProps> = ({
+  userId,
   avatarImageUrl,
   avatarFallback,
   name,
@@ -30,11 +32,12 @@ export const CardElement: React.FC<CardElementProps> = ({
   personalWebsite,
   portfolio,
 }) => {
+  const navigate = useNavigate();
   return (
     <Card
       className="relative w-auto col-span-1 overflow-hidden bg-transparent border-none hover:cursor-pointer hover:opacity-75 group"
       onClick={() => {
-        console.log(`Clicked ${name}`);
+        navigate(`/contact/${userId}`);
       }}
     >
       <CardContent className="relative p-0">

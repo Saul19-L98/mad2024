@@ -27,12 +27,12 @@ export const Searchbar: React.FC<SearchbarProps> = ({
       return;
     }
     setSearchQuery(e.target.value);
-    console.log(e.target.value); // Log what is being typed
+    // console.log(e.target.value); // Log what is being typed
 
     const filteredUsers = userProfiles.filter((user) =>
       user.name.toLowerCase().includes(inputUserName)
     );
-    console.log(filteredUsers);
+    // console.log(filteredUsers);
     if (filteredUsers.length > 0) {
       if (isFromHome) {
         setFilteredUsers(filteredUsers.slice(0, 9));

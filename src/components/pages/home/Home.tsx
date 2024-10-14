@@ -237,6 +237,7 @@ export const Home = () => {
                 userProfiles.map((user) => (
                   <CardElement
                     key={user.id}
+                    userId={user.id}
                     avatarImageUrl={user.profilePicture}
                     avatarFallback={user.nameFallback}
                     name={user.name}
@@ -251,13 +252,14 @@ export const Home = () => {
                 filteredUsers.map((user) => (
                   <CardElement
                     key={user.id}
+                    userId={user.id}
                     avatarImageUrl={user.profilePicture}
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
-                    personalWebsite={user.actions.viewWebsite}
-                    portfolio={user.actions.viewPortfolio}
+                    personalWebsite={user.actions.viewWebsite || ""}
+                    portfolio={user.actions.viewPortfolio || ""}
                   />
                 ))}
               {isSearching && <SkeletonCard numberOfCards={9} />}

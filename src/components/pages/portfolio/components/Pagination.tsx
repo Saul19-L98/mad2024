@@ -15,7 +15,7 @@ export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
   const page = parseInt(searchParams.get("page") || "1");
   const pageSize = parseInt(searchParams.get("pageSize") || "18"); // Default to 18 cards per page
   const [totalCount, setTotalCount] = useState(0);
-  console.log(page, pageSize);
+  // console.log(page, pageSize);
   const { setCurrentContent } = usePaginationStore();
   // Calculate start and end indexes for slicing the array
 
@@ -26,18 +26,18 @@ export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
       const startIndex = (page - 1) * pageSize;
       const endIndex = startIndex + pageSize;
       const currentUsers = usersData.slice(startIndex, endIndex);
-      console.log("data", usersData);
-      console.log("pagination current", currentUsers);
-      console.log("find users", usersData.length);
+      // console.log("data", usersData);
+      // console.log("pagination current", currentUsers);
+      // console.log("find users", usersData.length);
       setTotalCount(usersData.length);
       setCurrentContent(currentUsers);
     }
     if (amountOfUser !== 0) {
-      console.log("wtf");
-      console.log("pagination current", userProfiles);
+      // console.log("wtf");
+      // console.log("pagination current", userProfiles);
       const startIndex = (page - 1) * pageSize;
       const endIndex = startIndex + pageSize;
-      console.log(amountOfUser);
+      // console.log(amountOfUser);
       const currentUsers = userProfiles.slice(startIndex, endIndex);
       setCurrentContent(currentUsers);
     }

@@ -19,12 +19,12 @@ export const PortfoliosPage = () => {
   const { filteredUsers, isSearching, setBadgesFilter, setFilteredUsers } =
     useHomeStore();
   const { currentContent, setCurrentContent } = usePaginationStore();
-  console.log("portfolio current", currentContent);
+  // console.log("portfolio current", currentContent);
   const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
-  console.log("current content from portfolio", currentContent);
+  // console.log("current content from portfolio", currentContent);
   const navigate = useNavigate();
   const resetAndNavigate = (
     idBadge: number,
@@ -84,13 +84,14 @@ export const PortfoliosPage = () => {
                 currentContent.map((user) => (
                   <CardElement
                     key={user.id}
+                    userId={user.id}
                     avatarImageUrl={user.profilePicture}
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
-                    personalWebsite={user.actions.viewWebsite}
-                    portfolio={user.actions.viewPortfolio}
+                    personalWebsite={user.actions.viewWebsite || ""}
+                    portfolio={user.actions.viewPortfolio || ""}
                   />
                 ))}
               {filteredUsers.length > 0 &&
@@ -98,13 +99,14 @@ export const PortfoliosPage = () => {
                 currentContent.map((user) => (
                   <CardElement
                     key={user.id}
+                    userId={user.id}
                     avatarImageUrl={user.profilePicture}
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
                     dynamicImageUrl={user.portfolioImages[0]}
-                    personalWebsite={user.actions.viewWebsite}
-                    portfolio={user.actions.viewPortfolio}
+                    personalWebsite={user.actions.viewWebsite || ""}
+                    portfolio={user.actions.viewPortfolio || ""}
                   />
                 ))}
               {isSearching && <SkeletonCard numberOfCards={9} />}

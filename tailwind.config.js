@@ -111,7 +111,9 @@ export default {
   		'default-bg': 'linear-gradient(90deg, rgba(37,15,128,1) 0%, rgba(37,15,128,1) 100%)',
   		'text-main-gradient': 'linear-gradient(90deg, #1CCFFA 0%, #250F8B 52%, #FC08B5 100%)',
   		'text-title-gradient': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%, #FF85DB 100%)',
-  		'text-title-description-title': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%)'
+  		'text-title-description-title': 'linear-gradient(90deg, #80E6FF 0%, #7152FF 52%)',
+		'contact-bg': 'linear-gradient(173deg, #FFB512 0.48%, #FC53B8 25.24%, #5A39FF 50%, #250F8B 74.76%, #131A35 99.52%);',
+		"contact-bg-row": 'linear-gradient(90deg, #FFB512 0.48%, #FC53B8 25.24%, #5A39FF 50%, #250F8B 74.76%, #131A35 99.52%);'
   	}
   },
   plugins: [require("tailwindcss-animate",function({ addUtilities }) {

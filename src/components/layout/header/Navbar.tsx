@@ -15,7 +15,7 @@ export const Navbar = () => {
     <header className="w-full max-w-[90rem] px-4 my-4 md:px-16">
       <nav className="flex flex-row items-center justify-between">
         <div>
-          <Link to="/">
+          <Link to="/" className="hover:opacity-75">
             <IMadWhite />
           </Link>
         </div>

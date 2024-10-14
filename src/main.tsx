@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "@/components/pages/home/HomePage.tsx";
 import { ErrorPage } from "@/components/pages/error/ErrorPage.tsx";
 import { PortfoliosPage } from "./components/pages/portfolio/PortfoliosPage";
+import { ContactPage } from "@/components/pages/contact/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: "/portfolio",
     element: <PortfoliosPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "contact/:contactId",
+    element: <ContactPage />,
     errorElement: <ErrorPage />,
   },
 ]);
