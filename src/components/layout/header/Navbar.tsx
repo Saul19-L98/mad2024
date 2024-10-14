@@ -7,6 +7,11 @@ import {
 import { IArrow } from "@/assets/Icons/symbols/IconIndex";
 import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
+import {
+  madFacebook,
+  madInstagram,
+  madLinkedin,
+} from "@/data/config/mainLinks";
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -35,7 +40,7 @@ export const Navbar = () => {
           <ul className="flex-row justify-center hidden gap-6 sm:flex">
             <li>
               <Link
-                to="https://www.facebook.com"
+                to={madFacebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -46,7 +51,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="https://www.instagram.com"
+                to={madInstagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -57,7 +62,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="https://www.linkedin.com"
+                to={madLinkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

@@ -15,6 +15,11 @@ import { useBadgeStore } from "@/store/badge.store";
 import { usePaginationStore } from "@/store/pagination.store";
 import { UserProfile } from "@/types/users.type";
 import { userProfiles } from "@/data/users/portfolio.mock";
+import {
+  madFacebook,
+  madInstagram,
+  madLinkedin,
+} from "@/data/config/mainLinks";
 export const Footer = () => {
   // const [currentFilter, setCurrentFilter] = useState<number | null>(null);
   const navigate = useNavigate();
@@ -84,7 +89,7 @@ export const Footer = () => {
                 <ul className="flex flex-row justify-center gap-6">
                   <li>
                     <Link
-                      to="https://www.facebook.com"
+                      to={madFacebook}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Facebook"
@@ -95,7 +100,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="https://www.instagram.com"
+                      to={madInstagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"
@@ -106,7 +111,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="https://www.linkedin.com"
+                      to={madLinkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
