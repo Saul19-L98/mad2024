@@ -35,3 +35,12 @@ export const portafolioTags = [
   { id: 3, name: "Ilustración", href: "#" },
   { id: 5, name: "Editorial", href: "#" },
 ];
+// 83
+//  socialLinks: {
+//       instagram: null,
+//       behance: null,
+//       linkedin: null,
+//       twitter: null,
+//       pinterest: null,
+//       flickr: null,
+//     },

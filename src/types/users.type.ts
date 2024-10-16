@@ -15,7 +15,10 @@ export interface UserProfile {
     instagram?: string;
     behance?: string;
     linkedin?: string;
-    facebook?: string;
+    // facebook?: string;
+    twitter?: string;
+    pinterest?: string;
+    flickr?: string;
   };
   actions: {
     viewPortfolio?: string;

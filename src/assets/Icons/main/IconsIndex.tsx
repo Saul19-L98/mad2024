@@ -10,6 +10,9 @@ import { IFacebookWhite } from "./IFacebookWhite";
 import { IBehanceWhite } from "./IBehanceWhite";
 import { IBookWhite } from "./IBookWhite";
 import { IPcWhite } from "./IPcWhite";
+import { IFlickerWhite } from "./IFlickerWhite";
+import { ITwitterWhite } from "./ITwitterWhite";
+import { IPinterestWhite } from "./IPinterestWhite";
 
 // Export them for easy use in other parts of your app
 export {
@@ -24,4 +27,7 @@ export {
   IBehanceWhite,
   IBookWhite,
   IPcWhite,
+  IFlickerWhite,
+  ITwitterWhite,
+  IPinterestWhite,
 };

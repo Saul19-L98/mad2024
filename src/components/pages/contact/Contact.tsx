@@ -9,11 +9,14 @@ import { usePaginationStore } from "@/store/pagination.store";
 import { useBadgeStore } from "@/store/badge.store";
 import {
   IBehanceWhite,
-  IFacebookWhite,
+  // IFacebookWhite,
   IInstagramWhite,
   ILinkedinWhite,
   IBookWhite,
   IPcWhite,
+  IPinterestWhite,
+  ITwitterWhite,
+  IFlickerWhite,
 } from "@/assets/Icons/main/IconsIndex";
 import { Button } from "@/components/ui/button";
 import {
@@ -195,7 +198,7 @@ export const Contact = () => {
                           </Link>
                         </li>
                       )}
-                      {currentContactContent?.socialLinks.facebook && (
+                      {/* {currentContactContent?.socialLinks.facebook && (
                         <li>
                           <Link
                             to={currentContactContent?.socialLinks.facebook}
@@ -207,7 +210,7 @@ export const Contact = () => {
                             <IFacebookWhite />
                           </Link>
                         </li>
-                      )}
+                      )} */}
                       {currentContactContent?.socialLinks.linkedin && (
                         <li>
                           <Link
@@ -218,6 +221,45 @@ export const Contact = () => {
                             className="hover:opacity-75"
                           >
                             <ILinkedinWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.twitter && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Twitter"
+                            className="hover:opacity-75"
+                          >
+                            <ITwitterWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.pinterest && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.pinterest}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Pinterest"
+                            className="hover:opacity-75"
+                          >
+                            <IPinterestWhite />
+                          </Link>
+                        </li>
+                      )}
+                      {currentContactContent?.socialLinks.flickr && (
+                        <li>
+                          <Link
+                            to={currentContactContent?.socialLinks.flickr}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Flickr"
+                            className="hover:opacity-75"
+                          >
+                            <IFlickerWhite />
                           </Link>
                         </li>
                       )}
