@@ -13,8 +13,10 @@ import { useNavigate, Link } from "react-router-dom";
 import { useHomeStore } from "@/store/home.store";
 import { useBadgeStore } from "@/store/badge.store";
 import { usePaginationStore } from "@/store/pagination.store";
-import { UserProfile } from "@/types/users.type";
-import { userProfiles } from "@/data/users/portfolio.mock";
+// import { UserProfile } from "@/types/users.type";
+// import { userProfiles } from "@/data/users/portfolio.mock";
+import { userMainData } from "@/data/users/user.mainData";
+import { UserProfileData } from "@/types/usersdata.type";
 import {
   madFacebook,
   madInstagram,
@@ -26,13 +28,13 @@ export const Footer = () => {
   const { setCurrentContent } = usePaginationStore();
   const { setFilteredUsers, setBadgesFilter } = useHomeStore();
   const { setActiveBadge } = useBadgeStore();
-  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+  const getUsersByRoleId = (usersObject: UserProfileData[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
   const resetAndNavigate = (
     idBadge: number,
-    users: UserProfile[],
+    users: UserProfileData[],
     isFiltered: boolean
   ) => {
     setActiveBadge(idBadge);
@@ -43,10 +45,10 @@ export const Footer = () => {
   };
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, userProfiles, false);
+      resetAndNavigate(idBadge, userMainData, false);
       return;
     }
-    const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
+    const filteredUsers = getUsersByRoleId(userMainData, idBadge);
     resetAndNavigate(idBadge, filteredUsers, true);
     navigate("/portfolio?page=1");
   };
