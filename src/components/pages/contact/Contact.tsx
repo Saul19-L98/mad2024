@@ -40,7 +40,6 @@ export const CustomFigure: React.FC<CustomFigureProps> = ({
   badge,
   className,
 }) => {
-  console.log("image", profilePicture);
   return (
     <figure
       className={cn(
@@ -88,7 +87,6 @@ export const Contact = () => {
     const user = userMainData.find((user) => user.id === parseInt(contactId));
     if (user) {
       setIsLoading(false);
-      console.log("user", user);
       setCurrentContactContent(user);
     } else {
       navigate("/portfolio");
