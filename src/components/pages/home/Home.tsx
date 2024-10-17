@@ -1,10 +1,10 @@
 import { IHeroArrow } from "@/assets/Icons/symbols/IHeroArrow";
 import { IArrowBlack } from "@/assets/Icons/symbols/IArrowBlack";
 import { cn } from "@/lib/utils";
-import { ISpotify } from "@/assets/Icons/sponsors/ISpotify";
-import { IWhilpool } from "@/assets/Icons/sponsors/IWhilpool";
-import { IPngkey } from "@/assets/Icons/sponsors/IPngkey";
-import { IShopee } from "@/assets/Icons/sponsors/IShopee";
+// import { ISpotify } from "@/assets/Icons/sponsors/ISpotify";
+// import { IWhilpool } from "@/assets/Icons/sponsors/IWhilpool";
+// import { IPngkey } from "@/assets/Icons/sponsors/IPngkey";
+// import { IShopee } from "@/assets/Icons/sponsors/IShopee";
 import {
   Accordion,
   AccordionContent,
@@ -179,7 +179,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="px-4 md:py-4 md:px-16">
+      {/* <section className="px-4 md:py-4 md:px-16">
         <h2 className="text-center font-normal leading-5 tracking-tighter font-poppins font-lg text-[#B3B3D1]">
           El horizonte es posible gracias a
         </h2>
@@ -197,7 +197,7 @@ export const Home = () => {
             <IShopee />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="w-full">
         <div className="w-full max-w-[90rem] mx-auto px-4 pb-8 md:pb-12 md:py-4 md:px-16">
