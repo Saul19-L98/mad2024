@@ -5,8 +5,8 @@ export const usersGroup1s = [
     nameFallback: "FC",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Bienvenido! Soy Fátima Cárcamo conocida por el internet como Dusty, una persona que disfruta de las historias complicadas y los diseños mas extraños que puede encontrar, diseñadora e ilustradadora que busca alimentarse con nuevas experiencias ¡Espero disfrutes de esta aventura!",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/fatima_carcamo_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/fatima_carcamo_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -31,8 +31,8 @@ export const usersGroup1s = [
     nameFallback: "SC",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hola! Soy Silvia Castillo, también conocida como Lil.Uchi, una diseñadora la cual siempre busca mejorar y aprender cosas nuevas; la ilustración digital es un área que me apasiona y constantemente busco formas de retarme a mí misma.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/silvia_castillo_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/silvia_castillo_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -57,8 +57,8 @@ export const usersGroup1s = [
     nameFallback: "AF",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Soy Andrea, amante de las infinitas posibilidades del diseño gráfico. Me fascina explorar y experimentar con distintas técnicas, siempre buscando nuevas formas de expresión, con un enfoque especial en lo digital. Me entusiasma enfrentar desafíos que me impulsen a crecer y reinventarme, tanto personal como profesionalmente. Mis mayores pasiones son el branding y la publicidad, donde creo identidades visuales únicas y estrategias que conecten de manera cautivadora con el público.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/silvia_castillo_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/silvia_castillo_g1s/mockup.jpg"],
     socialLinks: {
       instagram:
         "http://www.linkedin.com/in/andrea-marcela-flores-rivas-00286521a",
@@ -84,8 +84,8 @@ export const usersGroup1s = [
     nameFallback: "MF",
     role: { id: 4, name: "Multimedia", href: "#" },
     bio: "Hola! soy Margarita Flores, conocida por Maggiie Flores soy una persona que disfruta de la naturaleza y la vida el color que la naturaleza, nos brinda en nuestro alrededor soy una diseñadora gráfica que le gusta aprender día con día.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/margarita_flores_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/margarita_flores_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -107,8 +107,10 @@ export const usersGroup1s = [
     nameFallback: "AG",
     role: { id: 4, name: "Multimedia", href: "#" },
     bio: "Hola, soy Alyss García, con alta emoción por vivir nuevas aventuras. Soy diseñadora gráfica además de fotógrafa. Amo los retos, las ideas y experiencias nuevas. Siempre busco dar todo de mi en cada proyecto y lograr una perfecta melodía. ",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/alessandra_garcia_g1s/picture.png",
+    portfolioImages: [
+      "./images/users/group1s/alessandra_garcia_g1s/mockup.png",
+    ],
     socialLinks: {
       instagram: "https://www.instagram.com/alyssg.productions/",
       behance: "http://behance.net/alegarca7/projects",
@@ -134,8 +136,10 @@ export const usersGroup1s = [
     nameFallback: "PA",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Hola!! Soy Priscilla Alegría, diseñadora gráfica, me apasiona crear branding y publicidad para la creación y diseño de diferentes marcas. Me comprometo mucho en aplicar mis conocimientos, habilidades y técnicas para que todo lo que podemos percibir sea innovador, único y llamativo a los usuarios.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/priscilla_alegria_g1s/picture.jpg",
+    portfolioImages: [
+      "./images/users/group1s/priscilla_alegria_g1s/mockup.jpg",
+    ],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -157,8 +161,8 @@ export const usersGroup1s = [
     nameFallback: "SM",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hola!, mi nombre es Sofía Mayorga, también conocida como 'MayBlue'. Tengo 22 años y soy una diseñadora gráfica con una pasión particular por la ilustración, identidad visual, la publicidad y el diseño editorial.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/sofia_mayorga_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/sofia_mayorga_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "http://behance.net/maybluestrip",
@@ -212,7 +216,7 @@ export const usersGroup1s = [
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Hola! Soy Andy, diseñadora gráfica y amante de todo lo visual. Me especializo en el branding, diseñando identidades que hablan por sí mismas; cada color, tipografía y forma está cuidadosamente seleccionada para reflejar la verdadera esencia de una marca. También disfruto creando contenido para redes sociales y publicidad, donde las ideas fluyen y se transforman en experiencias que conectan emocionalmente con las audiencias.",
     profilePicture: "",
-    portfolioImages: [""],
+    portfolioImages: ["./images/users/group1s/andrea_lechuga_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/andrealechuga",
@@ -237,8 +241,8 @@ export const usersGroup1s = [
     nameFallback: "CR",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Saludos! Mi nombre es Carlos Ruiz, aunque todos me conocen como Carlitos. Soy diseñador gráfico, amante de la música y los gatitos. Me considero como una persona apasionada ante las emociones y los procesos creativos para llegar a construir una idea en realidad mediante el diseño. Mi aspiración no solamente es ser un profesional en lo que hago, si no en dejar un legado de ideas que transforman lo que vemos y que mejor manera que con la publicidad y las marcas que nos rodean.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group1s/carlos_ruiz_g1s/picture.jpg",
+    portfolioImages: ["./images/users/group1s/carlos_ruiz_g1s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
