@@ -9,8 +9,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Gerardo Herrera. Mi enfoque esta en la sencillez que permite destacar la belleza de cada Diseño que realizo, atrayendo de esta manera a potenciales consumidores del producto",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/edwin_siguenza_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/edwin_siguenza_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/gerardoherrera1",
@@ -47,8 +47,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Bienvenidos a mi mundo! Soy Manuel Vides un diseñador gráfico apasionado por la ilustración y el diseño editorial, crear conceptos creativos y únicos es mi fuerte donde siempre busco expresar el lado emotivo y más humano del diseño.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/manuel_vides_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/manuel_vides_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/manuelvides",
@@ -86,8 +86,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Mi nombre es Ariel Roldán. Soy Diseñador Gráfico especializado en Branding, un apasionado diseñador que busca siempre aportar ideas ingeniosas para marcas que buscan una nueva identidad. ¡No hay trabajo pequeño o grande para mí!. Deseo que se hagan realidad desde la idea mas formal y profesional hasta la mas fantasiosa y unica para cada marca.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/ariel_roldan_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/ariel_roldan_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       other: "https://www.linkedin.com/in/ariel-rold%C3%A1n-b2b8382b3/",
@@ -125,8 +125,11 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Katherine Hernández soy diseñadora gráfica con un enfoque especializado en la edición de videos y la fotografía. Mi pasión por la comunicación visual me lleva a crear contenido atractivo y significativo, utilizando herramientas innovadoras para dar vida a las ideas de mis clientes. A través de la combinación de diseño gráfico y técnicas audiovisuales, busco contar historias que impacten y conecten con el público.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture:
+      "./images/users/group2ac/katherine_hernandez__g2ac/picture.png",
+    portfolioImages: [
+      "./images/users/group2ac/katherine_hernandez__g2ac/mockup.jpg",
+    ],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/katherihernnd1916",
@@ -164,8 +167,10 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola, soy Pame Figueroa! Como diseñadora gráfica, me apasiona transformar ideas en experiencias visuales auténticas, creando un aura que comunica, conecta e inspira. Cada proyecto refleja mi esencia, iluminando y cautivando a quienes lo experimentan. Me encantaría colaborar contigo para dar vida a ideas únicas y extraordinarias.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/pamela_figueroa_g2ac/picture.jpg",
+    portfolioImages: [
+      "./images/users/group2ac/pamela_figueroa_g2ac/mockup.jpg",
+    ],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/pamelafigueroa2",
@@ -202,8 +207,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Soy un diseñador especializado en crear experiencias digitales innovadoras y dinámicas, con un enfoque en interfaces sorprendentes y llenas de animaciones interactivas. Mi pasión es fusionar creatividad y funcionalidad, asegurando que cada proyecto sea intuitivo y atractivo. Utilizo plataformas de desarrollo sin código, eliminando la necesidad de un desarrollador, lo que permite a los clientes obtener sitios altamente interactivos de forma eficiente.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/eduardo_ayala_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/eduardo_ayala_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -245,8 +250,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Soy Gaby Alas, diseñadora y animadora digital. Me mueve la curiosidad y los desafíos que presenta la animación digital, me gusta poner a prueba mis propios límites y trascender ideas simples a extraordinarias. ¡Estaré más que encantada de trabajar contigo! ",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/gabriela_alas_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/gabriela_alas_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/gabyalas",
@@ -288,8 +293,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Bienvenidos a este espacio. Soy Diego García, un diseñador gráfico apasionado por el arte digital. En cada uno de mis proyectos, me esfuerzo por alcanzar la perfección y la satisfacción de mis clientes. Mi objetivo en cada proyecto es lograr la perfección y la plena satisfacción de mis clientes. No solo me dedico a la ilustración; también me enfoco en entender y comunicar de manera efectiva, transmitiendo mensajes claros y resolviendo problemas de comunicación a través de proyectos bien elaborados.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/diego_garcia_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/diego_garcia_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -332,8 +337,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Andrea Peralta, diseñadora gráfica, detallista con habilidades para diseñar y crear contenido para las redes sociales, medios digitales e impresos. Me entusiasma profundizar en los detalles y aplicar mis conocimientos y habilidades de manera efectiva. Estoy en constante búsqueda de aprendizaje y me esfuerzo por construir relaciones sólidas con mis clientes, siempre escuchando atentamente para entender y satisfacer sus necesidades.\r\n",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/andrea_peralta_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/andrea_peralta_g2ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/andreaperalta3",
@@ -375,8 +380,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Soy Jemima Recinos una diseñadora gráfica apasionada que busca cada día aventurarse a aprender cosas nuevas y crecer tanto en lo personal como profesional. \r\nMe encanta que todos los trabajos que realizo tengan un trasfondo significativo, en donde pueda convertir una simple idea en grandes proyectos. Mi enfoque es escuchar las necesidades y buscar soluciones estratégicas visuales que permitan comunicar sentimientos e ideas. ",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/jemima_recinos_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/jemima_recinos_g2ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/jemimarecinos1/analytics",
@@ -413,8 +418,8 @@ export const userGroup2ac = [
   //       href: "#",
   //     },
   //     bio: NaN,
-  //     profilePicture: "",
-  //     portfolioImages: [""],
+  //     profilePicture: "./images/users/group2ac/edwin_siguenza_g2ac/picture.jpg",
+  //     portfolioImages: ["./images/users/group2ac/edwin_siguenza_g2ac/mockup.jpg"],
   //     socialLinks: {
   //       instagram: null,
   //       other: NaN,
@@ -441,8 +446,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Roque Li Siú, diseñador gráfico. Transformo ideas en soluciones efectivas con un enfoque versátil. Cada proyecto lo veo como una oportunidad para superarme, entregando siempre resultados creativos y funcionales que conectan con las necesidades de mis clientes.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/roque_li siu_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/roque_li siu_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/roquelisi",
@@ -480,8 +485,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! soy Marlon Omir Abarca Merino (MOAM) un diseñador gráfico que se define como una persona pacifica y tranquila, me gusta tomar con seriedad mis retos, soy un joven que no se rinde a pesar de cualquier adversidad, donde hay un problema, siempre veo oportunidades y soluciones, soy fiel amigo de la simplicidad afectiva, centrandome seriamente en lo importante y en lo escencial, considero que soy un ser amigable y empático, entiendo y presto mucha atención al entorno que me rodea.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/marlon_abarca_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/marlon_abarca_g2ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/gallery/210033827/Portafolio-MOAM-2024",
@@ -518,8 +523,10 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Jonathan Crespin, un diseñador gráfico con una gran pasión por lo que hago. Me considero una persona competitiva, responsable y amable. Me gusta convertir mis ideas en grandes trabajos o proyectos, y siempre busco la manera de poder transmitir esas ideas en algo grandioso y único de manera clara y creativa.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/jonathan_crespin_g2ac/picture.png",
+    portfolioImages: [
+      "./images/users/group2ac/jonathan_crespin_g2ac/mockup.jpg",
+    ],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/jonathancrespin1",
@@ -557,8 +564,10 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "!Hola! Soy Debbie, Me considero una persona apasionada por el diseño digital, motivada constantemente por perfeccionar mis habilidades en diversas áreas del diseño gráfico. Disfruto aprendiendo nuevas técnicas y conocimientos que me permitan crecer tanto profesional como personalmente. Creo firmemente en el poder del trabajo en equipo para generar soluciones creativas y alcanzar resultados sobresalientes. Mi enfoque siempre está en evolucionar como profesional mientras aporto ideas innovadoras que impulsen el éxito de los proyectos en los que participo.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/debbie_martinez_g2ac/picture.jpg",
+    portfolioImages: [
+      "./images/users/group2ac/debbie_martinez_g2ac/mockup.jpg",
+    ],
     socialLinks: {
       instagram: "https://www.instagram.com/isamar_studio_7/",
       behance: null,
@@ -596,8 +605,11 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Soy Chris, una persona que disfruta enfrentar desafíos y siempre busca lo desconocido. Dado que el arte abstracto me permite expresar libremente mis pensamientos y sentimientos, lo admiro profundamente. Busco conectarme con aquellos que aprecian el arte y el diseño gráfico al plasmar mis ideas en un lienzo, creando obras que despierten el interés y el placer estético en quienes las contemplan.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture:
+      "./images/users/group2ac/christopher_chacon_g2ac/picture.png",
+    portfolioImages: [
+      "./images/users/group2ac/christopher_chacon_g2ac/mockup.png",
+    ],
     socialLinks: {
       instagram:
         "https://www.instagram.com/crr.chacon/profilecard/?igsh=eXVrcnBmaDNocnFo",
@@ -636,8 +648,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Dylan Calderón. Diseñador enfocado en el área de Social Media. Me apasiona visualizar la idea de contenido para plasmarlaen artes gráficas, principalmente visual pero también de manera audiovisual. Para mí, el diseño gráfico es un lenguaje visual profundo y multifacético, donde la estética y la semiótica convergen.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/dylan_zapata_g2ac/picture.png",
+    portfolioImages: ["./images/users/group2ac/dylan_zapata_g2ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -664,8 +676,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "Hola, ¡Soy Marce! Diseñadora apasionada por la publicidad y el diseño de exhibición. Me encanta combinar creatividad y estrategia para crear experiencias visuales que capturen la atención y cuenten historias, utilizando stands y visual de merchandising para transmitir el mensaje de una marca de forma clara y atractiva.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/marcela_ramos_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/marcela_ramos_g2ac/mockup.png"],
     socialLinks: {
       instagram: "https://www.instagram.com/mar_designs5/",
       behance: null,
@@ -703,8 +715,8 @@ export const userGroup2ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Esme, una persona que le gusta expresarse a través del diseño y las muchas ramas que este lo conforman. Creo firmemente en que las personas estamos en constante aprendizaje; por eso me encanta saber y descubrir cosas nuevas de esta linda carrera y los caminos que el conocimiento puede abrirte. Me considero una persona creativa, organizada, puntual y responsable.",
-    profilePicture: "",
-    portfolioImages: [""],
+    profilePicture: "./images/users/group2ac/yalu_campos_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/yalu_campos_g2ac/mockup.png"],
     socialLinks: {
       instagram: "https://www.instagram.com/greenduck.esme/",
       behance: null,
@@ -746,8 +758,8 @@ export const userGroup2ac = [
   //       href: "#",
   //     },
   //     bio: NaN,
-  //     profilePicture: "",
-  //     portfolioImages: [""],
+  //     profilePicture: "./images/users/group2ac/edwin_siguenza_g2ac/picture.jpg",
+  //     portfolioImages: ["./images/users/group2ac/edwin_siguenza_g2ac/mockup.jpg"],
   //     socialLinks: {
   //       instagram: null,
   //       other: NaN,
