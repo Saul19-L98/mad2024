@@ -1,9 +1,10 @@
 import { create } from "zustand";
-import { UserProfile } from "@/types/users.type";
+// import { UserProfile } from "@/types/users.type";
 
+import { UserProfileData } from "@/types/usersdata.type";
 interface PaginationStore {
-  currentContent: UserProfile[];
-  setCurrentContent: (content: UserProfile[]) => void;
+  currentContent: UserProfileData[];
+  setCurrentContent: (content: UserProfileData[]) => void;
 }
 
 export const usePaginationStore = create<PaginationStore>((set) => ({

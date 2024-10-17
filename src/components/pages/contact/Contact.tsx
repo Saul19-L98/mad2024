@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { userProfiles } from "@/data/users/portfolio.mock";
-import { UserProfile } from "@/types/users.type";
+// import { userProfiles } from "@/data/users/portfolio.mock";
+// import { UserProfile } from "@/types/users.type";
+import { UserProfileData } from "@/types/usersdata.type";
+import { userMainData } from "@/data/users/user.mainData";
 import { cn } from "@/lib/utils";
 import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { useHomeStore } from "@/store/home.store";
@@ -38,6 +40,7 @@ export const CustomFigure: React.FC<CustomFigureProps> = ({
   badge,
   className,
 }) => {
+  console.log("image", profilePicture);
   return (
     <figure
       className={cn(
@@ -72,7 +75,7 @@ export const CustomFigure: React.FC<CustomFigureProps> = ({
 };
 export const Contact = () => {
   const [currentContactContent, setCurrentContactContent] =
-    useState<UserProfile | null>(null);
+    useState<UserProfileData | null>(null);
   const { contactId } = useParams();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
@@ -82,9 +85,10 @@ export const Contact = () => {
       navigate("/portfolio");
       return;
     }
-    const user = userProfiles.find((user) => user.id === parseInt(contactId));
+    const user = userMainData.find((user) => user.id === parseInt(contactId));
     if (user) {
       setIsLoading(false);
+      console.log("user", user);
       setCurrentContactContent(user);
     } else {
       navigate("/portfolio");
@@ -94,13 +98,13 @@ export const Contact = () => {
   const { setBadgesFilter, setFilteredUsers } = useHomeStore();
   const { setCurrentContent } = usePaginationStore();
   // console.log("portfolio current", currentContent);
-  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+  const getUsersByRoleId = (usersObject: UserProfileData[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
   const resetAndNavigate = (
     idBadge: number,
-    users: UserProfile[],
+    users: UserProfileData[],
     isFiltered: boolean
   ) => {
     setActiveBadge(idBadge);
@@ -111,10 +115,10 @@ export const Contact = () => {
   };
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, userProfiles, false);
+      resetAndNavigate(idBadge, userMainData, false);
       return;
     }
-    const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
+    const filteredUsers = getUsersByRoleId(userMainData, idBadge);
     resetAndNavigate(idBadge, filteredUsers, true);
     navigate("/portfolio?page=1");
   };
@@ -137,7 +141,12 @@ export const Contact = () => {
               <CustomFigure
                 name={currentContactContent?.name}
                 badge={currentContactContent?.role}
-                profilePicture={currentContactContent?.profilePicture}
+                profilePicture={
+                  currentContactContent?.profilePicture &&
+                  currentContactContent.profilePicture.length > 0
+                    ? currentContactContent.profilePicture
+                    : "/images/users/mockup_default.jpg"
+                }
                 // className="col-span-1"
               />
             </section>
@@ -148,14 +157,15 @@ export const Contact = () => {
             <section className="flex flex-col items-center justify-center w-full col-span-1">
               <div className="flex flex-col items-start justify-center gap-8 lg:gap-16">
                 <div className="flex flex-row flex-wrap justify-start w-full gap-2 h-fit ">
-                  {currentContactContent?.tags.map((tag) => (
-                    <ResourceTypeBadge
-                      key={tag.id}
-                      data={tag}
-                      isMain
-                      callToAction={() => selectBadge(tag.id)}
-                    />
-                  ))}
+                  {currentContactContent?.tags.length !== 0 &&
+                    currentContactContent?.tags.map((tag) => (
+                      <ResourceTypeBadge
+                        key={tag.id}
+                        data={{ id: tag.id ?? 0, name: tag.name }}
+                        isMain
+                        callToAction={() => selectBadge(tag.id ?? 0)}
+                      />
+                    ))}
                 </div>
                 <div className="flex flex-col items-start justify-center gap-8 text-start md:gap-4">
                   <h1 className="text-2xl font-semibold leading-8 tracking-tight font-poppins text-fontcolors-100">
@@ -272,10 +282,11 @@ export const Contact = () => {
                       <Button
                         className="w-full font-semibold text-start font-poppins bg-text-main-gradient hover:bg-default-bg"
                         onClick={() => {
-                          const portfolioUrl =
-                            currentContactContent?.actions.viewPortfolio;
-                          if (portfolioUrl) {
-                            window.location.href = portfolioUrl;
+                          if (currentContactContent?.actions.viewWebsite) {
+                            window.open(
+                              currentContactContent.actions.viewWebsite,
+                              "_blank"
+                            );
                           }
                         }}
                       >
@@ -290,8 +301,10 @@ export const Contact = () => {
                         className="flex items-center justify-center w-full px-4 py-2 text-black bg-white rounded-md shadow-lg hover:opacity-75 hover:bg-white"
                         onClick={() => {
                           if (currentContactContent?.actions.viewWebsite) {
-                            window.location.href =
-                              currentContactContent.actions.viewWebsite;
+                            window.open(
+                              currentContactContent.actions.viewWebsite,
+                              "_blank"
+                            );
                           }
                         }}
                       >
@@ -332,7 +345,12 @@ export const Contact = () => {
               <figure className="w-full h-full max-h-[33.68rem] max-w-80 sm:max-w-2xl lg:max-w-3xl ">
                 <img
                   className="object-cover w-full h-full rounded-l-lg"
-                  src={currentContactContent?.portfolioImages[0]}
+                  src={
+                    currentContactContent?.portfolioImages &&
+                    currentContactContent.portfolioImages[0]?.length > 0
+                      ? currentContactContent.portfolioImages[0]
+                      : "/images/users/mockup_default.jpg"
+                  }
                   alt="design iamge"
                 />
               </figure>

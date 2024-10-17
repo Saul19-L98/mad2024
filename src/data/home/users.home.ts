@@ -1,11 +1,13 @@
-export const usersHomeProfiles = [
+import { UserProfileData } from "@/types/usersdata.type";
+
+export const usersHomeProfiles: UserProfileData[] = [
   {
     id: 5,
     name: "Alessandra García",
     nameFallback: "AG",
     role: { id: 4, name: "Multimedia", href: "#" },
     bio: "Hola, soy Alyss García, con alta emoción por vivir nuevas aventuras. Soy diseñadora gráfica además de fotógrafa. Amo los retos, las ideas y experiencias nuevas. Siempre busco dar todo de mi en cada proyecto y lograr una perfecta melodía. ",
-    profilePicture: "./images/users/group1s/alessandra_garcia_g1s/picture.png",
+    profilePicture: "./images/users/group1s/alessandra_garcia_g1s/picture.jpg",
     portfolioImages: [
       "./images/users/group1s/alessandra_garcia_g1s/mockup.png",
     ],
@@ -29,30 +31,46 @@ export const usersHomeProfiles = [
     ],
   },
   {
-    id: 8,
-    name: "Pamela Villacorta",
-    nameFallback: "PV",
-    role: { id: 6, name: "Social Media", href: "#" },
-    bio: "Hello, soy Pame diseñadora gráfica muy versátil🫰🏻✨, me encantan los retos y los proyectos que pueda explotar con mi creatividad. Tengo experiencia en el área de redes y publicidad, me encanta poder trabajar en producciones para la creación de contenido en redes, community manager y content, he trabajado con marcas nacionales como internacionales. ",
-    profilePicture: "",
-    portfolioImages: [""],
+    id: 127,
+    name: "Gaby Alas",
+    nameFallback: "APGA",
+    role: {
+      id: 4,
+      name: "Multimedia",
+      href: "#",
+    },
+    bio: "Soy Gaby Alas, diseñadora y animadora digital. Me mueve la curiosidad y los desafíos que presenta la animación digital, me gusta poner a prueba mis propios límites y trascender ideas simples a extraordinarias. ¡Estaré más que encantada de trabajar contigo! ",
+    profilePicture: "./images/users/group2ac/gabriela_alas_g2ac/picture.jpg",
+    portfolioImages: ["./images/users/group2ac/gabriela_alas_g2ac/mockup.jpg"],
     socialLinks: {
-      instagram: "https://www.instagram.com/noo_dles11/",
-      behance: "https://www.behance.net/mallows_1",
-      linkedin: "https://www.linkedin.com/in/pamela-villacorta-3b938a213/",
+      instagram: null,
+      behance: "https://www.behance.net/gabyalas",
+      linkedin: "https://www.linkedin.com/in/gabriela-alas-891579200",
       twitter: null,
       pinterest: null,
       flickr: null,
     },
     actions: {
-      viewPortfolio:
-        "https://issuu.com/mallows_1/docs/portafolio_pdf?cta=post-publish-view-live",
-      viewWebsite: "https://pamevillacorta16.wixsite.com/pameportafolio",
+      viewPortfolio: "https://heyzine.com/flip-book/540b2ca16d.html",
+      viewWebsite: "www.gabyalitas.com",
       downloadCV: "",
     },
     tags: [
-      { id: 6, name: "Social Media", href: "#" },
-      { id: 1, name: "Branding", href: "#" },
+      {
+        id: 4,
+        name: "Multimedia",
+        href: "#",
+      },
+      {
+        id: 2,
+        name: "UX/UI",
+        href: "#",
+      },
+      {
+        id: 6,
+        name: "Social Media",
+        href: "#",
+      },
     ],
   },
   {
@@ -206,6 +224,7 @@ export const usersHomeProfiles = [
     profilePicture: "./images/users/group4s/diana_rivas_g4s/picture.jpg",
     portfolioImages: ["./images/users/group4s/diana_rivas_g4s/mockup.jpg"],
     socialLinks: {
+      instagram: "https://www.instagram.com/dianarivad/",
       behance: "https://www.behance.net/dianarivad",
       linkedin: "https://www.linkedin.com/in/diana-rivas-18b6122b1",
       twitter: null,
@@ -245,8 +264,8 @@ export const usersHomeProfiles = [
       href: "#",
     },
     bio: "¡Hola, me llamo Karla valle y mi especialidad es la ilustración! me gusta pensar que la pasión por lo que hacemos es lo que mueve al mundo, ya que si no hay metas, no hay donde apuntar en la vida. Por eso me gusta pensar que soy capaz de hacer muchas cosas en mi campo profesional, siendo mi mayor incentivo inspirar a los demás y crear un mundo donde se aprecie al diseñador por lo que es, un comunicador visual. ",
-    profilePicture: "./images/users/group5/karla_valle_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/karla_valle_g5s/mockup.jpg"],
+    profilePicture: "./images/users/group5s/karla_valle_g5s/picture.jpg",
+    portfolioImages: ["./images/users/group5s/karla_valle_g5s/mockup.jpg"],
     socialLinks: {
       instagram:
         "https://www.instagram.com/gluten.kitten?igsh=eHJ1MXBqcGd1YThw",
@@ -273,9 +292,12 @@ export const usersHomeProfiles = [
       href: "#",
     },
     bio: "¡Hola! Soy Orlando, y llevo el título de diseñador al límite, la pasión por lo estético y extravagante ha hecho que los proyectos en los que me he involucrado gocen de personalidad. Me apasiona conversar y conocer a nuevas personas, una cualidad que me permite conectar con el cliente y empatizar con sus necesidades para brindar resultados de alta calidad gráfica y conceptual.",
-    profilePicture: "./images/users/group5/orlando_navarrete_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/orlando_navarrete_g5s/mockup.png"],
+    profilePicture: "./images/users/group5s/orlando_navarrete_g5s/picture.jpg",
+    portfolioImages: [
+      "./images/users/group5s/orlando_navarrete_g5s/mockup.png",
+    ],
     socialLinks: {
+      instagram: "https://www.instagram.com/orlandonavarrete25/",
       behance: "https://www.behance.net/orlandonavarre1",
       linkedin: "https://www.linkedin.com/in/orlando-navarrete-074172332",
       twitter: null,
@@ -305,8 +327,8 @@ export const usersHomeProfiles = [
       href: "#",
     },
     bio: "Hola, soy Elías García, y te doy la bienvenida al lugar donde todo es posible, bajo mi concepto limitless, y un viaje a través de mis ilustraciones, experimentaremos el poder de lo imposible, y comprobar que no hay nada imposible.",
-    profilePicture: "./images/users/group5/elias_garcia_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/elias_garcia_g5s/mockup.jpg"],
+    profilePicture: "./images/users/group5s/elias_garcia_g5s/picture.jpg",
+    portfolioImages: ["./images/users/group5s/elias_garcia_g5s/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/eliaxgc/",
       behance: "https://www.behance.net/elasgarca",
@@ -327,5 +349,76 @@ export const usersHomeProfiles = [
         href: "#",
       },
     ],
+  },
+  {
+    id: 94,
+    name: "Adriana Quintanilla ",
+    nameFallback: "QHAG",
+    role: {
+      id: 1,
+      name: "Branding",
+      href: "#",
+    },
+    bio: "Hola! Soy Adriana Quintanilla, amante de la naturaleza y los atardeceres, estudiante actualmente en la licenciatura en Diseño grafico en la universidad Don Bosco, apasionada del diseño, siendo mis fuertes la fotografía, publicidad y el branding, creando nuevas marcas o mejorando su identidad visual. ",
+    profilePicture:
+      "./images/users/group5s/adriana_quintanilla_g5s/picture.jpg",
+    portfolioImages: [
+      "./images/users/group5s/adriana_quintanilla_g5s/mockup.jpg",
+    ],
+    socialLinks: {
+      instagram: null,
+      behance: "https://www.behance.net/adriquintanilla1",
+      linkedin: null,
+      twitter: null,
+      pinterest: null,
+      flickr: null,
+    },
+    actions: {
+      viewPortfolio:
+        "https://issuu.com/adriquinta/docs/portafolio_adriana_quintanilla_2024",
+      viewWebsite: "https://quintanillaadri21.wixsite.com/dinamismo",
+      downloadCV: "",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "Branding",
+        href: "#",
+      },
+      {
+        id: 6,
+        name: "Social Media",
+        href: "#",
+      },
+    ],
+  },
+  {
+    id: 58,
+    name: "Ruben Melara",
+    nameFallback: "MPRE",
+    role: {
+      id: 4,
+      name: "Multimedia",
+      href: "#",
+    },
+    bio: "Hola mi nombre es Ruben Melara, Soy un Diseñador Gráfico, apasionado por los detalles pequeños, me interesa mucho la buena convivencia con mis compañeros y resolver conflictos para seguir trabajando bajo un mismo objetivo, me interesa la creación de contenido para redes sociales y me apasiona mucho la fotografía y la edición.",
+    profilePicture: "./images/users/group4s/ruben_melara_g4s/picture.jpg",
+    portfolioImages: ["./images/users/group4s/ruben_melara_g4s/mockup.png"],
+    socialLinks: {
+      instagram:
+        "https://www.instagram.com/ruben_melara_?igsh=Y3p4ZzlwZWo2bXFw&utm_source=qr",
+      behance: "https://www.behance.net/rubenmelara",
+      linkedin:
+        "https://www.linkedin.com/in/ruben-pineda-a7b7a127?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      twitter: null,
+      pinterest: null,
+      flickr: null,
+    },
+    actions: {
+      viewPortfolio: "",
+      viewWebsite: "",
+      downloadCV: "",
+    },
+    tags: [],
   },
 ];

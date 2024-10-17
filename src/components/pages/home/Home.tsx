@@ -16,7 +16,8 @@ import { tagsHomeTable } from "@/data/tags/tags.optins";
 import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { mainTags } from "@/data/tags/tags.optins";
 import { Searchbar } from "@/components/common/pages/Searchbar";
-import { userProfiles } from "@/data/users/users.mock";
+// import { userProfiles } from "@/data/users/users.mock";
+import { usersHomeProfiles } from "@/data/home/users.home";
 import { userProfiles as usersMainData } from "@/data/users/portfolio.mock";
 import { CardElement } from "@/components/common/CardElement";
 import { Button } from "@/components/ui/button";
@@ -27,7 +28,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { useBadgeStore } from "@/store/badge.store";
 import { usePaginationStore } from "@/store/pagination.store";
-import { UserProfile } from "@/types/users.type";
+// import { UserProfile } from "@/types/users.type";
+import { UserProfileData } from "@/types/usersdata.type";
 
 export const Home = () => {
   const { filteredUsers, isSearching, setFilteredUsers, setBadgesFilter } =
@@ -72,13 +74,13 @@ export const Home = () => {
     };
   }, []);
 
-  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+  const getUsersByRoleId = (usersObject: UserProfileData[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
   const resetAndNavigate = (
     idBadge: number,
-    users: UserProfile[],
+    users: UserProfileData[],
     isFiltered: boolean
   ) => {
     setActiveBadge(idBadge);
@@ -91,12 +93,12 @@ export const Home = () => {
 
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, userProfiles, false);
+      resetAndNavigate(idBadge, usersHomeProfiles, false);
       return;
     }
     const filteredUsers = getUsersByRoleId(usersMainData, idBadge);
     if (filteredUsers.length === 0) {
-      resetAndNavigate(idBadge, userProfiles, false);
+      resetAndNavigate(idBadge, usersHomeProfiles, false);
       return;
     }
     resetAndNavigate(idBadge, filteredUsers, true);
@@ -234,7 +236,7 @@ export const Home = () => {
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
               {filteredUsers.length === 0 &&
                 !isSearching &&
-                userProfiles.map((user) => (
+                usersHomeProfiles.map((user) => (
                   <CardElement
                     key={user.id}
                     userId={user.id}
@@ -242,7 +244,11 @@ export const Home = () => {
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
-                    dynamicImageUrl={user.portfolioImages[0]}
+                    dynamicImageUrl={
+                      user.portfolioImages[0] === ""
+                        ? "./images/users/mockup_default.jpg"
+                        : user.portfolioImages[0]
+                    }
                     personalWebsite={user.actions.viewWebsite}
                     portfolio={user.actions.viewPortfolio}
                   />

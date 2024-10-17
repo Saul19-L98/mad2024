@@ -1,4 +1,5 @@
-export const usersGroup5s = [
+import { UserProfileData } from "@/types/usersdata.type";
+export const usersGroup5s: UserProfileData[] = [
   {
     id: 71,
     name: "Andrea Bonilla",
@@ -9,8 +10,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola soy Andrea Bonilla! Soy una persona creativa y autodidacta, con una gran pasión por el aprendizaje continuo. Me encanta explorar nuevos estilos y tendencias de diseño, siempre buscando ir más allá de mis conocimientos actuales. Tengo la capacidad de aprender rápidamente, adaptándome con facilidad a nuevos desafíos y oportunidades",
-    profilePicture: "./images/users/group5/andrea_bonilla_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/andrea_bonilla_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/andrea_bonilla_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/andrea_bonilla_g5s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -52,8 +53,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola Soy Anderson Borja! Soy una persona que encuentra en los retos una oportunidad de crecimiento. Mi capacidad para aprender de forma autónoma me permite enfrentar desafíos complejos y desarrollar nuevas habilidades. Me apasiona compartir mis conocimientos y experiencias para ayudar a otros a superar sus propios obstáculos.",
-    profilePicture: "./images/users/group5/anderson_borja_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/anderson_borja_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/anderson_borja_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/anderson_borja_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/odirborja",
@@ -95,8 +96,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola! Soy Rebeca Cañas Diseñadora gráfica apasionada por el branding, la fotografía y el diseño editorial. Con un enfoque creativo, busco transmitir emociones y mensajes a través de mis proyectos.Combinando estética y funcionalidad, creando identidades visuales que resuenen con el público.",
-    profilePicture: "./images/users/group5/rebeca_cañas_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/rebeca_cañas_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/rebeca_cañas_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/rebeca_cañas_g5s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/rebecacaas",
@@ -138,8 +139,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Fabiola Cañas Me autodefino como alguien fascinada por observar y descubrir distintos modos de plasmar ideas elaboradas de forma sencilla, prestando atención a los detalles para atribuirle coherencia a todo. Me gusta encontrar inspiración en la cotidianidad y disfruto de compartirla a través de la fotografía y la ilustración.",
-    profilePicture: "./images/users/group5/fabiola_cañas_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/fabiola_cañas_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/fabiola_cañas_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/fabiola_cañas_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/fabcanas",
@@ -181,8 +182,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Eisy Cortez Me considero una persona honesta, activa, divertida y creativa, con facilidad para trabajar en equipo y crear conceptos interesantes. La característica que más me define es mi persistencia combinada con la atención a los detalles. El área en la que me destacó es la creación de ilustraciones, en conjunto con la animación de las mismas.\r\n",
-    profilePicture: "./images/users/group5/eisy_cortez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/eisy_cortez_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/eisy_cortez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/eisy_cortez_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -224,8 +225,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola, soy Diana Cruz , una apasionada diseñadora que busca crear experiencias visuales que inspiran y comunican. A lo largo de mi formación, he desarrollado una profunda pasión por crear identidades visuales que no solo destacan, sino que también cuentan historias ,también disfruto en fusionar creatividad y  autenticidad en cada proyecto de diseño.",
-    profilePicture: "./images/users/group5/diana_cruz_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/diana_cruz_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/diana_cruz_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/diana_cruz_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/dianacruz5",
@@ -268,13 +269,17 @@ export const usersGroup5s = [
     },
     bio: "¡Hola! Soy Katherine Echeverría, diseñadora gráfica con experiencia en la creación de identidades visuales, materiales publicitarios y multimedia. Mi objetivo es utilizar el diseño para comunicar ideas de manera efectiva y emocional, logrando una conexión significativa entre las personas y los productos o servicios. Disfruto cada aspecto del proceso creativo, buscando siempre generar impacto a través del diseño.",
     profilePicture:
-      "./images/users/group5/katherine_echeverria_g5s/picture.jpg",
+      "/images/users/group5s/katherine_echeverria_g5s/picture.jpg",
     portfolioImages: [
-      "./images/users/group5/katherine_echeverria_g5s/mockup.jpg",
+      "/images/users/group5s/katherine_echeverria_g5s/mockup.jpg",
     ],
     socialLinks: {
       instagram: "Katherine Echeverría",
-      other: "Be: https://www.behance.net/katherineamaya ",
+      behance: "https://www.behance.net/katherineamaya",
+      linkedin: null,
+      twitter: null,
+      pinterest: null,
+      flickr: null,
     },
     actions: {
       viewPortfolio:
@@ -310,9 +315,10 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Walter Elías me considero alguien apasionado en la creación de identidad visual, diseño publicitario y animación, disfruto del proceso creativo para poder crear diseños atractivos y funcionales, empleando mis conocimientos adquiridos a lo largo de mi carrera en diseño gráfico.",
-    profilePicture: "./images/users/group5/walter_elias_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/walter_elias_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/walter_elias_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/walter_elias_g5s/mockup.png"],
     socialLinks: {
+      instagram: null,
       behance: "www.behance.net/walterelias",
       linkedin: null,
       twitter: null,
@@ -336,9 +342,10 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Ale, una diseñador gráfica que encuentra en los detalles pequeños universos por explorar. Mi portafolio es un reflejo de este enfoque, un microcosmos donde cada proyecto representa una parte esencial de mi universo creativo. Me apasiona transformar ideas en experiencias visuales que conecten profundamente con la audiencia. A través de un equilibrio entre estética, técnica y storytelling, busco que cada diseño cuente una historia única y resuene de forma significativa con quienes lo experimentan.",
-    profilePicture: "./images/users/group5/alejandra_flores_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/alejandra_flores_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/alejandra_flores_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/alejandra_flores_g5s/mockup.jpg"],
     socialLinks: {
+      instagram: null,
       behance: "https://www.behance.net/veronicaflores24",
       linkedin: "https://www.linkedin.com/in/alejandra-flores-b8749a293/",
       twitter: null,
@@ -379,9 +386,10 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola soy Valeria Navas! Mi enfoque como diseñadora es crear con sentido humano y que mejor manera de hacerlo que de la mano de la inspiración natural, lo he podido hacer a lo largo de mi carrera, al trabajar con el branding en emprendimientos que me hacen ver lo bonito que es involucrar elementos de nuestro entorno.",
-    profilePicture: "./images/users/group5/valeria_fuentes_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/valeria_fuentes_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/valeria_fuentes_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/valeria_fuentes_g5s/mockup.png"],
     socialLinks: {
+      instagram: null,
       behance: "https://www.behance.net/valeriafuentes2",
       linkedin: null,
       twitter: null,
@@ -417,8 +425,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola soy Edward Garay como diseñador grafico y CEO de horizon entertainment te doy la bienvenida a experimentar lo que la imaginación puede llegar a lograr, quiero transmitir creatividad, pasion y entisiamos en mis ilustraciones, de como un concept art puede hablar mas que mil palabras, de como la imaginacion y como la mente puede proyectar lo que se quiere lograr. no hay nada imposible, soñar, triunfar es lo que hacemos en Horizon.",
-    profilePicture: "./images/users/group5/edward_garay_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/edward_garay_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/edward_garay_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/edward_garay_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/edwardgarayz",
@@ -460,8 +468,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola, soy Elías García, y te doy la bienvenida al lugar donde todo es posible, bajo mi concepto limitless, y un viaje a través de mis ilustraciones, experimentaremos el poder de lo imposible, y comprobar que no hay nada imposible.",
-    profilePicture: "./images/users/group5/elias_garcia_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/elias_garcia_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/elias_garcia_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/elias_garcia_g5s/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/eliaxgc/",
       behance: "https://www.behance.net/elasgarca",
@@ -493,8 +501,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Mónica Guevara, como diseñadora a través de mis trabajos deseo transmitir y comunicar, tengo experiencia en el área de social media, me encanta ilustrar y la toma de fotografías, en mi portafolio he querido transmitir aquello que va más allá de la mente, ya que como diseñadores es nuestro día a día crear e innovar y en cada uno habita un universo creativo, es por eso que te invito a que puedas visitar el mío.",
-    profilePicture: "./images/users/group5/monica_guevara_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/monica_guevara_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/monica_guevara_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/monica_guevara_g5s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/monicaguevara2",
@@ -522,13 +530,13 @@ export const usersGroup5s = [
     name: "Julissa Cardoza",
     nameFallback: "GCKJ",
     role: {
-      id: null,
+      id: 6,
       name: "Social Media",
       href: "#",
     },
     bio: "¡Hola! soy Julissa Cardoza, una diseñadora proactiva, creativa y responsable con capacidad de trabajar en equipo. La publicidad, branding, diseño editorial y social media son áreas en las que poseo mejor desempeño y pasión. Como diseñadora gráfica me motiva el proceso de entender lo que el cliente busca, conectar con su visión, y materializarlo en un diseño que no solo los represente, sino que también les aporte valor.",
-    profilePicture: "./images/users/group5/julissa_cardoza_g5s/picture.png",
-    portfolioImages: ["./images/users/group5/julissa_cardoza_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/julissa_cardoza_g5s/picture.png",
+    portfolioImages: ["/images/users/group5s/julissa_cardoza_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/kenyajguzman20",
@@ -560,9 +568,10 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Orlando, y llevo el título de diseñador al límite, la pasión por lo estético y extravagante ha hecho que los proyectos en los que me he involucrado gocen de personalidad. Me apasiona conversar y conocer a nuevas personas, una cualidad que me permite conectar con el cliente y empatizar con sus necesidades para brindar resultados de alta calidad gráfica y conceptual.",
-    profilePicture: "./images/users/group5/orlando_navarrete_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/orlando_navarrete_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/orlando_navarrete_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/orlando_navarrete_g5s/mockup.png"],
     socialLinks: {
+      instagram: null,
       behance: "https://www.behance.net/orlandonavarre1",
       linkedin: "https://www.linkedin.com/in/orlando-navarrete-074172332",
       twitter: null,
@@ -592,8 +601,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Jenn, una entusiasta del color y, además, de las buenas historias. Pero, ¿quién no lo es? Soy creativa, propositiva y siempre lista para enfrentar los retos de la mejor manera. Como diseñadora gráfica, soy versátil y multidisciplinaria, con experiencia tanto en diseño editorial digital como impreso. Con esta premisa en mente, te invito a que juntos devolvamos el color al mundo.",
-    profilePicture: "./images/users/group5/jennifer_lopez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/jennifer_lopez_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/jennifer_lopez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/jennifer_lopez_g5s/mockup.png"],
     socialLinks: {
       instagram: "https://www.instagram.com/j.lpz_85/?hl=es",
       behance: null,
@@ -635,8 +644,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola! Soy Majo, una persona creativa, versatil y resolutiva, que busca la constante mejora profesional y personal, enfocada en encontrar soluciones funcionales y creativas a problemas de diseño; disfruto los colores vibrantes y los diseños con personalidad. Utilizo lo audiovisual y la ilustración para plasmar emociones y momentos únicos.",
-    profilePicture: "./images/users/group5/maria_lopez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/maria_lopez_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/maria_lopez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/maria_lopez_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/mjloppez_",
@@ -717,8 +726,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Estefany Mejía, una creativa apasionada por el diseño multimedia. Disfruto del proceso creativo, desde dar vida a una idea hasta ver su impacto en la audiencia. Me adapto a diferentes desafíos manteniendo mi estilo, buscando que mis proyectos no sean solo atractivos  sino que también conecten con el publico. Además de mi enfoque multimedia, también disfruto crear publicidad y material impreso.",
-    profilePicture: "./images/users/group5/estefany_mejia_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/estefany_mejia_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/estefany_mejia_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/estefany_mejia_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/abigailmec",
@@ -755,8 +764,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola, soy Henry Murga, un diseñador gráfico en construcción. Creo que cada proyecto es una oportunidad para aprender y crecer. Me gusta crear, en todo momento, cualquier ocasión es ideal para un boceto espontáneo que dé un toque único a una idea que de inicio a un nuevo proyecto.",
-    profilePicture: "./images/users/group5/henry_murgo_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/henry_murgo_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/henry_murgo_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/henry_murgo_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/henrymurga1",
@@ -789,8 +798,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Ingrid, una entusiasta del diseño con una gran pasión por la creatividad. Me fascina explorar ideas y convertirlas en proyectos vibrantes. Cada desafío representa una nueva aventura, y disfruto tanto del diseño digital como del impreso. Mi objetivo es que cada trabajo refleje un toque especial.",
-    profilePicture: "./images/users/group5/ingrid_obando_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/ingrid_obando_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/ingrid_obando_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/ingrid_obando_g5s/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/soyingriddg/",
       behance: null,
@@ -828,8 +837,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola! Soy Nectalí Orellana, un diseñador muy creativo, alegre, dedicado y en busqueda de nuevas cosas por aprender. Disfruto del arte y de ser parte de ello, trato que mis trabajos sean siempre buenos y que tengan un nivel profesional, busco constantemente que todo lo haga que me haga feliz conmigo mismo, con mi  trabajo y por como lo desempeño.",
-    profilePicture: "./images/users/group5/nectali_orellana_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/nectali_orellana_g5s/mockup.png"],
+    profilePicture: "/images/users/group5s/nectali_orellana_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/nectali_orellana_g5s/mockup.png"],
     socialLinks: {
       instagram: "https://www.instagram.com/nectaliorellana_/",
       behance: "https://www.behance.net/nectaliorellana27",
@@ -851,8 +860,8 @@ export const usersGroup5s = [
     nameFallback: "ORFG",
     role: { id: 2, name: "UX/UI", href: "#" },
     bio: "¡Hola, soy Fátima Osegueda! Como diseñadora UX/UI y web designer no code, con experiencia en diseño editorial y publicidad para redes sociales, mi enfoque es crear soluciones visuales que cuentan historias. Me dedico a desarrollar experiencias auténticas que cautivan e inspiran a través del diseño. Mi objetivo es transformar cada proyecto en una oportunidad para innovar y ofrecer resultados que superen las expectativas.",
-    profilePicture: "./images/users/group5/fatima_osegueda_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/fatima_osegueda_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/fatima_osegueda_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/fatima_osegueda_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/fatimaosegued",
@@ -885,11 +894,12 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola! Soy Adriana Quintanilla, amante de la naturaleza y los atardeceres, estudiante actualmente en la licenciatura en Diseño grafico en la universidad Don Bosco, apasionada del diseño, siendo mis fuertes la fotografía, publicidad y el branding, creando nuevas marcas o mejorando su identidad visual. ",
-    profilePicture: "./images/users/group5/adriana_quintanilla_g5s/picture.jpg",
+    profilePicture: "/images/users/group5s/adriana_quintanilla_g5s/picture.jpg",
     portfolioImages: [
-      "./images/users/group5/adriana_quintanilla_g5s/mockup.jpg",
+      "/images/users/group5s/adriana_quintanilla_g5s/mockup.jpg",
     ],
     socialLinks: {
+      instagram: null,
       behance: "https://www.behance.net/adriquintanilla1",
       linkedin: null,
       twitter: null,
@@ -925,8 +935,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola soy Víctor Rodríguez, Diseñador Gráfico/Multimedia con experiencia académica, donde he desarollado mis habilidades en los programas de Adobe. Comprometido con la creación de contenido visual por medio del diseño, cumplo con la capacidad de trabajar de manera autónoma o colaborativa para alcanzar los objetivos establecidos. Estoy constantemente buscando oportunidades para aumentar y desarollar mi creatividad.",
-    profilePicture: "./images/users/group5/victor_rodriguez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/victor_rodriguez_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/victor_rodriguez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/victor_rodriguez_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/vctorrodrguez21",
@@ -958,8 +968,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: '"Hola, soy Luis Mazariego, diseñador gráfico-multimedia apasionado por crear experiencias visuales impactantes. Recién inicié mi carrera, combinando creatividad y tecnología para desarrollar soluciones innovadoras. Me esfuerzo por aportar ideas frescas y modernas en diseño gráfico, edición multimedia y animación. Estoy listo para colaborar en proyectos que me desafíen a crecer y se conecten con el público, mientras sigo aprendiendo y evolucionando en esta emocionante mundo de la creatividad.',
-    profilePicture: "./images/users/group5/luis_rodriguez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/luis_rodriguez_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/luis_rodriguez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/luis_rodriguez_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance:
@@ -987,9 +997,9 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: 'Hola y bienvenido a mi portafolio de diseño gráfico. Mi nombre es Jacqueline, soy estudiante de la Licenciatura en Diseño Gráfico y estoy emocionada de compartir contigo el concepto "Grainy Soft Glow", una fusión de suavidad, calidez y sofisticación técnica en cada pieza visual.',
-    profilePicture: "./images/users/group5/jacqueline_sanchez_g5s/picture.jpg",
+    profilePicture: "/images/users/group5s/jacqueline_sanchez_g5s/picture.jpg",
     portfolioImages: [
-      "./images/users/group5/jacqueline_sanchez_g5s/mockup.png",
+      "/images/users/group5s/jacqueline_sanchez_g5s/mockup.png",
     ],
     socialLinks: {
       instagram: null,
@@ -1023,8 +1033,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Mi nombre es Josué Torres, un diseñador convencido con la filosofia  de que el diseño tiene el poder de transformar vidas y negocios.  Un diseñador apasionado por la animación y el renderizado 3D y mi objetivo es crear experiencias visuales impactantes que combinen estética y funcionalidad.",
-    profilePicture: "./images/users/group5/josue_torres_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/josue_torres_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/josue_torres_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/josue_torres_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -1056,8 +1066,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "Hola, Soy Katherine Valdez!, diseñadora grafica, fotografa e ilustradora que se interesa demasiado en explorar la creatividad dejandose llevar pos las ideas que llegan a mi mente.  ",
-    profilePicture: "./images/users/group5/katherine_valdez_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/katherine_valdez_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/katherine_valdez_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/katherine_valdez_g5s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -1084,8 +1094,8 @@ export const usersGroup5s = [
       href: "#",
     },
     bio: "¡Hola, me llamo Karla valle y mi especialidad es la ilustración! me gusta pensar que la pasión por lo que hacemos es lo que mueve al mundo, ya que si no hay metas, no hay donde apuntar en la vida. Por eso me gusta pensar que soy capaz de hacer muchas cosas en mi campo profesional, siendo mi mayor incentivo inspirar a los demás y crear un mundo donde se aprecie al diseñador por lo que es, un comunicador visual. ",
-    profilePicture: "./images/users/group5/karla_valle_g5s/picture.jpg",
-    portfolioImages: ["./images/users/group5/karla_valle_g5s/mockup.jpg"],
+    profilePicture: "/images/users/group5s/karla_valle_g5s/picture.jpg",
+    portfolioImages: ["/images/users/group5s/karla_valle_g5s/mockup.jpg"],
     socialLinks: {
       instagram:
         "https://www.instagram.com/gluten.kitten?igsh=eHJ1MXBqcGd1YThw",

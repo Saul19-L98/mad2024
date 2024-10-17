@@ -1,4 +1,6 @@
-export const userGroup1ac = [
+import { UserProfileData } from "@/types/usersdata.type";
+
+export const userGroup1ac: UserProfileData[] = [
   {
     id: 101,
     name: " Dianita Domínguez",
@@ -9,10 +11,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Bienvenid@s, soy Dianita una diseñadora gráfica apasionada por resolver problemas visuales, pieza por pieza. Creo que cada proyecto es como un rompecabezas: las piezas deben encajar a la perfección para crear algo significativo. Me esfuerzo por encontrar esa sinergia entre funcionalidad y estética, donde cada elemento tiene su razón de ser.",
-    profilePicture: "./images/users/group1ac/diana_dominguez_g1ac/picture.jpg",
-    portfolioImages: [
-      "./images/users/group1ac/diana_dominguez_g1ac/mockup.png",
-    ],
+    profilePicture: "/images/users/group1ac/diana_dominguez_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/diana_dominguez_g1ac/mockup.png"],
     socialLinks: {
       instagram: "https://www.instagram.com/dianadominguez_grafico/",
       behance: null,
@@ -52,11 +52,10 @@ export const userGroup1ac = [
     profilePicture:
       "./images/users/group1ac/adriana_rodriguez_g1ac/picture.png",
     portfolioImages: [
-      "./images/users/group1ac/adriana_rodriguez_g1ac/mockup.png",
+      "/images/users/group1ac/adriana_rodriguez_g1ac/mockup.png",
     ],
     socialLinks: {
       instagram: null,
-      other: "",
       behance: "https://www.behance.net/adriana-rodriguez_",
       linkedin: null,
       twitter: null,
@@ -86,8 +85,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Hola, soy Sebastián Varela. Tengo 23 años y soy diseñador gráfico, ilustrador y fotógrafo. Con más de diez años de experiencia en ilustración freelance y seis años en ComicCon como artista, actualmente estudio Diseño Gráfico en la Universidad Don Bosco y soy director de marketing en The Hub Lab. Me apasiona el cine y usar el poder visual para contar historias que resuelvan problemas y conecten con las personas.",
-    profilePicture: "./images/users/group1ac/eric_varela_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/eric_varela_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/eric_varela_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/eric_varela_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/artsebasvarela/",
       behance: null,
@@ -119,14 +118,14 @@ export const userGroup1ac = [
     name: ' "Gabriela Sánchez"',
     nameFallback: "SAGM",
     role: {
-      id: null,
+      id: 6,
       name: "Social Media",
       href: "#",
     },
     bio: "¡Hola! Soy Gabriela Sánchez, diseñadora gráfica de 22 años, me describo como una persona muy alegre, optimista y que busca siempre una solución a los problemas. El mundo necesita personas más humanas y menos materialistas y esa es mi gran motivación para poder dar siempre lo mejor de mí en cada aspecto de mi vida.",
-    profilePicture: "./images/users/group1ac/gabriela_sanchez_g1ac/picture.jpg",
+    profilePicture: "/images/users/group1ac/gabriela_sanchez_g1ac/picture.png",
     portfolioImages: [
-      "./images/users/group1ac/gabriela_sanchez_g1ac/mockup.png",
+      "/images/users/group1ac/gabriela_sanchez_g1ac/mockup.jpg",
     ],
     socialLinks: {
       instagram: null,
@@ -164,8 +163,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola!, Mi nombre es Sally Flores, soy diseñadora gráfica, especializada en branding y creación de material multimedia. Durante mi carrera universitaria he desarrollado habilidades técnicas que me permiten crear contenido visual de calidad, que se ajusta al deseo del cliente y aporta valor a las marcas o empresas que cuenten con dicho contenido.",
-    profilePicture: "./images/users/group1ac/sally_flores_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/sally_flores_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/sally_flores_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/sally_flores_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/sallyfloresdesign",
       behance: null,
@@ -203,8 +202,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Katya Ingles, diseñadora gráfica especializada en branding, diseño para redes sociales y campañas de email marketing. He trabajado como freelance y con agencias, colaborando con marcas como Amerant Bank, Karma and Luck, y People's Choice Beef Jerky. Me apasiona crear diseños duraderos y funcionales, siempre basados en buenas prácticas y estrategias sólidas.",
-    profilePicture: "./images/users/group1ac/katya_ingles_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/katya_ingles_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/katya_ingles_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/katya_ingles_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -236,12 +235,11 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Oscar Durán, diseñador gráfico especializado en branding e Identidad de marca, mi pasión es pasar al área gráfica lo que las personas piensan y quieren trasmitir, a través de su marca. He estado en proyectos como creaciones de packaging, creación de Identidad de marca y publicidad para redes para diferentes marcas, además de proyectos de freelance, donde he logrado conectar con otros campos de diseño, como edición de video, modelado en 3D, diseño editorial y muchas más.",
-    profilePicture: "./images/users/group1ac/oscar_duran_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/oscar_duran_g1ac/mockup.png"],
+    profilePicture: "/images/users/group1ac/oscar_duran_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/oscar_duran_g1ac/mockup.png"],
     socialLinks: {
       instagram: null,
-      other: "https://www.behance.net/oscardurandesign",
-      behance: null,
+      behance: "https://www.behance.net/oscardurandesign",
       linkedin: null,
       twitter: null,
       pinterest: null,
@@ -264,12 +262,11 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Katya Segura, un poco trillado pero desde que tengo memoria me apasiona el arte y la expresión creativa en todas sus formas. Considero que soy una diseñadora versátil, con facilidad de adaptarme a cualquier reto creativo. Actualmente estoy desempeñando mis habilidades en una agencia de publicidad, trabajando de la mano con marcas salvadoreñas para fortalecer identidades y experiencias visuales.",
-    profilePicture: "./images/users/group1ac/katya_segura_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/katya_segura_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/katya_segura_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/katya_segura_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
-      other: "https://www.behance.net/katyavsegura",
-      behance: null,
+      behance: "https://www.behance.net/katyavsegura",
       linkedin: null,
       twitter: null,
       pinterest: null,
@@ -309,12 +306,11 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Me especializo en branding y dirección creativa. Mi pasión radica en crear identidades visuales que diferencian a las empresas de sus competidores y forjan conexiones duraderas con sus clientes en cada punto de contacto. Estoy convencida de que el diseño trasciende lo visual; es el lenguaje invisible que moldea la percepción de tu marca. Una marca se compone de las experiencias que crea y las emociones que evoca.",
-    profilePicture: "./images/users/group1ac/maria_orellana_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/maria_orellana_g1ac/mockup.png"],
+    profilePicture: "/images/users/group1ac/maria_orellana_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/maria_orellana_g1ac/mockup.png"],
     socialLinks: {
       instagram: null,
-      other: "https://www.instagram.com/designstudiobymajo/",
-      behance: null,
+      behance: "https://www.instagram.com/designstudiobymajo/",
       linkedin: null,
       twitter: null,
       pinterest: null,
@@ -344,8 +340,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy María Cruz, diseñadora gráfica con tres años de experiencia y he tenido la oportunidad de trabajar con marcas nacionales e internacionales. Me apasiona el branding y la publicidad en redes sociales, aunque disfruto aprender de cada área del diseño. A lo largo de mi carrera, he trabajado en proyectos para diversos medios publicitarios, siempre con el objetivo de crear soluciones visuales que impacten y comuniquen de manera efectiva.",
-    profilePicture: "./images/users/group1ac/maria_cruz_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/maria_cruz_g1ac/mockup.png"],
+    profilePicture: "/images/users/group1ac/maria_cruz_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/maria_cruz_g1ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/mariazzcruz",
@@ -388,8 +384,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Soy María Fernanda Espinoza, diseñadora gráfica salvadoreña. Me identifico profesionalmente como Mafer. Apasionada por el diseño gráfico desde hace 6 años, me desenvuelvo destacablemente en el área de branding, redes sociales y también la ilustración. Me gusta estar en constante evolución y aprendiendo nuevos estilos, herramientas y maneras de desarrollar mis proyectos. Mi objetivo al diseñar es hacer uso de la empatía hacia las necesidades de mis clientes, para obtener resultados funcionales e impactantes que alivien sus frustraciones.",
-    profilePicture: "./images/users/group1ac/maria_espinoza_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/maria_espinoza_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/maria_espinoza_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/maria_espinoza_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/fernandespinoz26",
@@ -427,8 +423,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Norma Enemecia Guzmán Portillo, una estudiante entusiasta de diseño gráfico con una pasión por la creatividad y la innovación. Estoy en constante búsqueda de nuevas inspiraciones y oportunidades para crecer y desarrollarme en este apasionante campo del diseño. Como estudiante de diseño gráfico, me caracterizo por mi curiosidad, mi disposición para aprender y mi dedicación en cada proyecto en el que me embarco. Disfruto explorando diferentes técnicas, estilos y medios para ampliar mis habilidades y perspectivas creativas.",
-    profilePicture: "./images/users/group1ac/norma_guzman_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/norma_guzman_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/norma_guzman_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/norma_guzman_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -461,12 +457,11 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Hola, soy Isahel Mejia, estudiante de diseño gráfico apasionado por el desarrollo de soluciones visuales creativas. Me especializo en la creación de contenido gráfico para redes sociales, multimedia, y ilustración. Creo en el poder del diseño para comunicar emociones y conectar a las personas. Mi objetivo es crear experiencias visuales que resuenen con la audiencia, usando un enfoque que combina creatividad, técnica y funcionalidad.",
-    profilePicture: "./images/users/group1ac/isahel_mejia_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/isahel_mejia_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/isahel_mejia_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/isahel_mejia_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
-      other: "https://www.instagram.com/isaheldg/",
-      behance: null,
+      behance: "https://www.instagram.com/isaheldg/",
       linkedin: null,
       twitter: null,
       pinterest: null,
@@ -500,14 +495,13 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Mi pasión por el arte, presente desde mi infancia, ha sido una constante que me ha impulsado a explorar diferentes estilos y técnicas. El mundo de la fantasía y las películas animadas han sido grandes fuentes de inspiración, alimentando mi imaginación y enfoque creativo. En estos años, he perfeccionado mis habilidades en áreas como la ilustración, el branding y el diseño para redes, siempre buscando un equilibrio entre técnica y creatividad.",
-    profilePicture: "./images/users/group1ac/marcela_martinez_g1ac/picture.png",
+    profilePicture: "/images/users/group1ac/marcela_martinez_g1ac/picture.png",
     portfolioImages: [
-      "./images/users/group1ac/marcela_martinez_g1ac/mockup.jpg",
+      "/images/users/group1ac/marcela_martinez_g1ac/mockup.jpg",
     ],
     socialLinks: {
       instagram: null,
-      other: "https://www.behance.net/marcelamelendez",
-      behance: null,
+      behance: "https://www.behance.net/marcelamelendez",
       linkedin: null,
       twitter: null,
       pinterest: null,
@@ -541,8 +535,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Soy Melvin Salazar, diseñador gráfico versátil, especializado en diseño editorial, multimedia y publicidad en redes sociales. Apasionado por crear soluciones visuales ante diversas necesidades, combinando creatividad con pensamiento crítico y una constante búsqueda de innovación.",
-    profilePicture: "./images/users/group1ac/melvin_salazar_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/melvin_salazar_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/melvin_salazar_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/melvin_salazar_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -579,10 +573,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Hola soy David, tengo 24 años y soy diseñador con experiencia en diseño publicitario, branding, motion graphics, diseño de packaging, diseño de marketing por correo electrónico, algo de diseño web y modelado 3D. Una de mis fortalezas es generar ideas y luego traducirlas en diseños funcionales. Trabajo bien en equipo y considero que la comunicación es esencial para un buen desarrollo del trabajo.",
-    profilePicture: "./images/users/group1ac/rodrigo_aguilar_g1ac/picture.png",
-    portfolioImages: [
-      "./images/users/group1ac/rodrigo_aguilar_g1ac/mockup.png",
-    ],
+    profilePicture: "/images/users/group1ac/rodrigo_aguilar_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/rodrigo_aguilar_g1ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/rodrigoaguilar10",
@@ -614,8 +606,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Mónica Barrios, me apasiona el arte desde pequeña, es por medio del Diseño Gráfico que puedo demostrar mi creatividad y asimismo disfrutar de lo que hago. Me gusta leer sobre historias de marcas y crear a partir de ello. Me considero una persona que aprende rápido y que no tiene un límite para seguir aprendiendo.",
-    profilePicture: "./images/users/group1ac/monica_barrios_g1ac/picture.jpg",
-    portfolioImages: ["./images/users/group1ac/monica_barrios_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/monica_barrios_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/monica_barrios_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/monica_barrios16/",
       behance: "https://www.behance.net/monicabarrios6",
@@ -658,10 +650,9 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "¡Hola! Soy Carolina Monterrosa, diseñadora gráfica con un enfoque creativo y versátil. Me considero una persona con una gran atención al detalle y con la capacidad de combinar diversas disciplinas, como branding, publicidad e ilustración. Me apasiona el aprendizaje constante y siempre busco nuevas oportunidades que impulsen mi crecimiento creativo.",
-    profilePicture:
-      "./images/users/group1ac/andrea_monterrosa_g1ac/picture.jpg",
+    profilePicture: "/images/users/group1ac/andrea_monterrosa_g1ac/picture.jpg",
     portfolioImages: [
-      "./images/users/group1ac/andrea_monterrosa_g1ac/mockup.png",
+      "/images/users/group1ac/andrea_monterrosa_g1ac/mockup.jpg",
     ],
     socialLinks: {
       instagram: null,
@@ -700,10 +691,9 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Yo soy Ali. Tengo experiencia en el área laboral con relación a creación de contenido visual y publicitario. He trabajado en el desarrollo de videos animados, diseño editorial para educación y gestión de publicidad. Manejo redes sociales y proyectos con imprentas. He colaborado con marcas reconocidas como FREUND, EPA y VIDRI a nivel nacional y centroamericano.",
-    profilePicture:
-      "./images/users/group1ac/alisson_hernandez_g1ac/picture.png",
+    profilePicture: "/images/users/group1ac/alisson_hernandez_g1ac/picture.png",
     portfolioImages: [
-      "./images/users/group1ac/alisson_hernandez_g1ac/mockup.jpg",
+      "/images/users/group1ac/alisson_hernandez_g1ac/mockup.jpg",
     ],
     socialLinks: {
       instagram: null,
@@ -747,8 +737,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Hola! soy Marvin y me considero una persona que disfruta profundamente de la alegría, la actividad y extrovertido, valorando la simplicidad en su máxima expresión, especialmente en aquellos momentos donde puedo aplicar mi creatividad. El diseño corporativo, donde la precisión y la justicia son esenciales para comunicar una idea de manera efectiva. Cada día me motiva la oportunidad de superarme y ser mejor que ayer.",
-    profilePicture: "./images/users/group1ac/marvin_morales_g1ac/picture.png",
-    portfolioImages: ["./images/users/group1ac/marvin_morales_g1ac/mockup.jpg"],
+    profilePicture: "/images/users/group1ac/marvin_morales_g1ac/picture.png",
+    portfolioImages: ["/images/users/group1ac/marvin_morales_g1ac/mockup.jpg"],
     socialLinks: {
       instagram: "https://www.instagram.com/mar_balta01/",
       behance: "https://www.behance.net/marvinmorales2",
@@ -791,10 +781,8 @@ export const userGroup1ac = [
       href: "#",
     },
     bio: "Creativa y apasionada con experiencia en la creación de soluciones visuales. Tengo una profunda comprensión del diseño centrado en el usuario, la tipografía, el color y la composición. Soy dinámica, proactiva y disfruto tanto del trabajo en equipo como de los proyectos individuales. Mi enfoque me permite transformar emociones en arte visual, buscando siempre conectar de manera significativa con quienes ven mis diseños.",
-    profilePicture: "./images/users/group1ac/diana_dominguez_g1ac/picture.jpg",
-    portfolioImages: [
-      "./images/users/group1ac/diana_dominguez_g1ac/mockup.png",
-    ],
+    profilePicture: "/images/users/group1ac/diana_dominguez_g1ac/picture.jpg",
+    portfolioImages: ["/images/users/group1ac/diana_dominguez_g1ac/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: null,

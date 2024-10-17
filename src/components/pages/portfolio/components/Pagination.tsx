@@ -3,11 +3,13 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { usePaginationStore } from "@/store/pagination.store";
-import { UserProfile } from "@/types/users.type";
-import { userProfiles as usersData } from "@/data/users/portfolio.mock";
+// import { UserProfile } from "@/types/users.type";
+// import { userProfiles as usersData } from "@/data/users/portfolio.mock";
+import { UserProfileData } from "@/types/usersdata.type";
+import { userMainData } from "@/data/users/user.mainData";
 
 interface PaginationProps {
-  userProfiles: UserProfile[];
+  userProfiles: UserProfileData[];
 }
 
 export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
@@ -25,11 +27,11 @@ export const Pagination: React.FC<PaginationProps> = ({ userProfiles }) => {
     if (amountOfUser === 0) {
       const startIndex = (page - 1) * pageSize;
       const endIndex = startIndex + pageSize;
-      const currentUsers = usersData.slice(startIndex, endIndex);
+      const currentUsers = userMainData.slice(startIndex, endIndex);
       // console.log("data", usersData);
       // console.log("pagination current", currentUsers);
       // console.log("find users", usersData.length);
-      setTotalCount(usersData.length);
+      setTotalCount(userMainData.length);
       setCurrentContent(currentUsers);
     }
     if (amountOfUser !== 0) {

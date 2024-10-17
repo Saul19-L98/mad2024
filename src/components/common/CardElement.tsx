@@ -33,6 +33,8 @@ export const CardElement: React.FC<CardElementProps> = ({
   portfolio,
 }) => {
   const navigate = useNavigate();
+  console.log("avatarImageUrl", avatarImageUrl);
+  console.log("dynamicImageUrl", dynamicImageUrl);
   return (
     <Card
       className="relative w-auto col-span-1 overflow-hidden bg-transparent border-none hover:cursor-pointer hover:opacity-75 group"
@@ -55,34 +57,38 @@ export const CardElement: React.FC<CardElementProps> = ({
 
           {/* Buttons to appear on hover */}
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-4 p-4 font-semibold leading-5 transition-all duration-300 ease-in-out translate-y-full opacity-0 xl:flex-row xl:items-center xl:justify-center font-poppins group-hover:opacity-100 group-hover:translate-y-0">
-            <Link
-              to={personalWebsite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.5rem]"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevents card click event
-              }}
-            >
-              <span className="mr-2">
-                <IPersonalWeb />
-              </span>
-              Ver página web
-            </Link>
-            <Link
-              to={portfolio}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.25rem]"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevents card click event
-              }}
-            >
-              <span className="mr-2">
-                <IPortfolio />
-              </span>
-              Ver portafolio
-            </Link>
+            {personalWebsite.length > 0 && (
+              <Link
+                to={personalWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.5rem]"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents card click event
+                }}
+              >
+                <span className="mr-2">
+                  <IPersonalWeb />
+                </span>
+                Ver página web
+              </Link>
+            )}
+            {portfolio.length > 0 && (
+              <Link
+                to={portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center px-4 py-2 text-black bg-white rounded-md hover:opacity-85 shadow-lg w-[11.25rem]"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents card click event
+                }}
+              >
+                <span className="mr-2">
+                  <IPortfolio />
+                </span>
+                Ver portafolio
+              </Link>
+            )}
           </div>
         </figure>
       </CardContent>

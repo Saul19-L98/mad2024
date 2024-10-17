@@ -1,12 +1,14 @@
-export const userGroupo3s = [
+import { UserProfileData } from "@/types/usersdata.type";
+
+export const userGroupo3s: UserProfileData[] = [
   {
     id: 13,
     name: "Víctor Alfaro",
     nameFallback: "VA",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Mi nombre es Víctor Alfaro, es un gusto mostrarme a todos ustedes como diseñador gráfico, me dedico a múltiples áreas de diseño, pero mi fuerte más grande es el Branding, me apasiona el apartado visual de las marcas y como estas poseen presencia por medio de su visibilidad, me he desarrollado trabajando en múltiples proyectos que me han permitido ganar la experiencia profesional que demuestra mis conocimientos y habilidades aptas para este mundo de la creación.",
-    profilePicture: "./images/users/group3s/victor_alfaro_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/victor_alfaro_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/victor_alfaro_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/victor_alfaro_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: " https://www.behance.net/edgardoalfaro",
@@ -33,8 +35,8 @@ export const userGroupo3s = [
     nameFallback: "EA",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hello there! Mi nombre es Emerson Amaya, un diseñador gráfico cuya pasión e ideas en muchas ocasiones provienen de la música, lo asoció como un canal que me brinda inspiración para expresar de manera visual el arte que comparto por medio de las áreas donde se demuestran mis fortalezas, tales como el branding, ilustración y multimedia, las cuales he adquirido durante mis años de crecimiento cognitivo, practicando y poniendo en práctica a través de proyectos y experiencias de vida.",
-    profilePicture: "./images/users/group3s/emerson_amaya_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/emerson_amaya_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/emerson_amaya_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/emerson_amaya_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/emersonamaya",
@@ -60,8 +62,8 @@ export const userGroupo3s = [
     nameFallback: "LA",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Hola a todos! Mi nombre es Lesly Argueta, soy diseñadora gráfica, y me considero una apasionada creativa desde mi niñez. Actualmente me dedico al mundo del diseño, en áreas como branding, ilustración y publicidad, que me permiten implementar las hábilidades adquiridas durante mis 5 años de formación académica, expandiendo mi experiencia, conocimientos y pasión sobre lo que contemplo como mi vocación de vida. ",
-    profilePicture: "./images/users/group3s/lesly_argueta_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/lesly_argueta_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/lesly_argueta_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/lesly_argueta_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/leslyargueta1",
@@ -88,8 +90,8 @@ export const userGroupo3s = [
     nameFallback: "LR",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "Soy Lisseth Romero, me especializo en la ilustración tradicional y digital, con un enfoque en el mundo juvenil e infantil. Mi pasión por este campo es lo que impulsa mi creatividad día a día, permitiéndome combinar mis habilidades para crear piezas llenas de vida que cuentan historias, capturan emociones, y transmiten la belleza en su forma más mágica.",
-    profilePicture: "./images/users/group3s/lisseth_romero_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/lisseth_romero_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/lisseth_romero_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/lisseth_romero_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/lissethromero6",
@@ -114,8 +116,8 @@ export const userGroupo3s = [
     nameFallback: "FC",
     role: { id: 6, name: "Social Media", href: "#" },
     bio: "¡Hola! Soy Fátima, diseñadora gráfica especializada en social media. Me encanta convertir desafíos en soluciones visuales creativas. Para mí, el diseño es una herramienta que impulsa la creatividad y mejora la comunicación, así como cada proyecto es una oportunidad para aprender y aportar ideas innovadoras. ¡Comencemos a crear algo único y memorable juntos!",
-    profilePicture: "./images/users/group3s/fatima_calles_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/fatima_calles_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/fatima_calles_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/fatima_calles_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/fatimacalles1",
@@ -137,8 +139,8 @@ export const userGroupo3s = [
     nameFallback: "JC",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Hello! Soy Julissa Castillo, soy diseñadora gráfica e ilustradora. Me apasiona mucho el crear nuevos mundos e ideas, es por eso que la ilustración es un área en la que me especializo, en ella puedo explorar al máximo mi creatividad y habilidades. También me especializo en la creación de Branding y artes para redes sociales, soy una diseñadora versátil que puede tomar los desafíos en cualquier rubro. No hay límite para la creatividad e imaginación.",
-    profilePicture: "./images/users/group3s/julissa_castillo_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/julissa_castillo_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/julissa_castillo_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/julissa_castillo_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: " https://www.behance.net/julissacastillo2",
@@ -163,8 +165,8 @@ export const userGroupo3s = [
     nameFallback: "MC",
     role: { id: 5, name: "Editorial", href: "#" },
     bio: "Hola, Soy Marce, diseñadora gráfica enfocada en el diseño editorial y branding.  Soy amable y atenta al detalle, rasgos que me permiten construir relaciones positivas con mis compañeros y trabajar bien en equipo.",
-    profilePicture: "./images/users/group3s/victor_alfaro_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/victor_alfaro_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/victor_alfaro_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/victor_alfaro_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/marcelacruz1",
@@ -189,8 +191,8 @@ export const userGroupo3s = [
     nameFallback: "DE",
     role: { id: 2, name: "UX/UI", href: "#" },
     bio: "Hola, soy David, diseñador gráfico especializado en crear soluciones digitales intuitivas y positivas a través de la experiencia de usuario, diseño de interfaces, publicidad e ilustración. He tenido la fortuna de colaborar con más de 18 marcas nacionales e internacionales, siempre aportando un enfoque creativo y resolutivo. Me apasiona trabajar en proyectos que fomenten la creatividad y ofrezcan experiencias significativas para los usuarios, buscando siempre aportar valor en cada detalle.",
-    profilePicture: "./images/users/group3s/david_echeverría_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/david_echeverría_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/david_echeverría_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/david_echeverría_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/davidecheverria23",
@@ -217,8 +219,8 @@ export const userGroupo3s = [
     nameFallback: "LR",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Soy Luis Rivas, un diseñador comprometido con la mejora continua, siempre buscando aprender y experimentar con nuevas técnicas. Mis áreas de especialidad incluyen el Branding y Publicidad, al mismo tiempo que exploro con entusiasmo el mundo de la Multimedia, Ilustracion y el Modelado 3D, donde sigo perfeccionando mis habilidades.",
-    profilePicture: "./images/users/group3s/luis_rivas_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/luis_rivas_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/luis_rivas_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/luis_rivas_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/luishernndez41",
@@ -243,8 +245,8 @@ export const userGroupo3s = [
     nameFallback: "DL",
     role: { id: 4, name: "Multimedia", href: "#" },
     bio: "¡Hola! Soy Diego Landaverde, estudiante en mi último ciclo de la Licenciatura en Diseño Gráfico, con una especialización en fotografía. Me apasiona capturar momentos y detalles que cuenten historias a través de la imagen. Mi enfoque se centra en la composición y la estética visual, siempre buscando transmitir emociones genuinas y autenticidad en cada toma. Disfruto de la oportunidad de crecer en este campo, perfeccionando mi técnica y explorando nuevas formas de comunicar a través de la lente.",
-    profilePicture: "./images/users/group3s/diego_landaverde_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/diego_landaverde_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/diego_landaverde_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/diego_landaverde_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -270,8 +272,8 @@ export const userGroupo3s = [
     nameFallback: "LL",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¿Qué tal? Soy Levi León, un diseñador capaz de adaptarme a cualquier cliente y proyecto, sin importar el entorno. Para mí, cualquier lugar es un espacio de trabajo potencial, ya que creo firmemente que no hay límites para lo que puedo aprender, crear y transformar. Mi enfoque es siempre flexible, permitiéndome abordar retos con creatividad y eficiencia, aprendiendo y reforzando mis habilidades en el proceso, siempre creciendo.",
-    profilePicture: "./images/users/group3s/levi_leon_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/levi_leon_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/levi_leon_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/levi_leon_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/levileon",
@@ -296,8 +298,8 @@ export const userGroupo3s = [
     nameFallback: "IL",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Hola! Soy Ivania López Soy una apasionada del diseño gráfico y me encanta combinar mis hobbies con mi amor por lo colorido y adorable, reflejándolo en cada creación que hago. Mis principales intereses dentro del diseño gráfico son el Branding y social media, áreas en las que siempre busco crecer y mejorar continuamente. Mi enfoque creativo busca transmitir alegría y autenticidad en cada proyecto. ",
-    profilePicture: "./images/users/group3s/ivania_lopez_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/ivania_lopez_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/ivania_lopez_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/ivania_lopez_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/ivanialpez",
@@ -320,8 +322,8 @@ export const userGroupo3s = [
     nameFallback: "DM",
     role: { id: 5, name: "Editorial", href: "#" },
     bio: "Soy Daniel Marinero, Tengo 22 años y soy un diseñador gráfico apasionado por el minimalismo y la simplicidad funcional. Creo que menos es más y busco soluciones visuales limpias, claras y efectivas. Mi enfoque se centra en la estética moderna y el diseño que habla por sí solo, sin necesidad de complicaciones innecesarias. Me encanta trabajar con tipografía precisa, paletas de colores sutiles y estructuras geométricas que transmitan un mensaje de forma directa.",
-    profilePicture: "./images/users/group3s/daniel_marinero_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/daniel_marinero_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/daniel_marinero_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/daniel_marinero_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/anielmarinero",
@@ -343,8 +345,8 @@ export const userGroupo3s = [
     nameFallback: "HM",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hola! Me llamo Hersy Martínez, tengo 23 años. Soy diseñador gráfico e ilustrador. Me apasiona mucho la naturaleza, el minimalismo y lo abstracto. A lo largo de mi carrera, he fortalecido mis habilidades en ilustración e innovación, implementando soluciones efectivas en mis proyectos de diseño. En la actualidad, me ha interesado la animación, cuya área estoy trabajando de manera constante. Además, tengo el honor de liderar la Asociación de Diseño.",
-    profilePicture: "./images/users/group3s/hersy_martinez_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/hersy_martinez_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/hersy_martinez_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/hersy_martinez_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -393,8 +395,8 @@ export const userGroupo3s = [
     nameFallback: "DM",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "",
-    profilePicture: "./images/users/group3s/diana_mendoza_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/diana_mendoza_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/diana_mendoza_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/diana_mendoza_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/dielimen",
@@ -416,8 +418,8 @@ export const userGroupo3s = [
     nameFallback: "JM",
     role: { id: 6, name: "Social Media", href: "#" },
     bio: "Manejo intermedio-avanzado de programas de diseño como Ilustrador, Photoshop e InDesign. Y programas de edición de video como Premier y After Effects.",
-    profilePicture: "./images/users/group3s/juan_molina_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/juan_molina_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/juan_molina_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/juan_molina_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/juanpamolina11",
@@ -439,8 +441,8 @@ export const userGroupo3s = [
     nameFallback: "LO",
     role: { id: 6, name: "Social Media", href: "#" },
     bio: "Soy Luis Ordoñez, diseñador gráfico fundador de Catarsis, una marca enfocada en proyectos de ilustración, publicidad y branding. Me apasiona crear soluciones visuales que no solo llamen la atención, sino que también conecten de manera auténtica con el público. Aplicando un enfoque estratégico y creativo en cada proyecto.",
-    profilePicture: "./images/users/group3s/luis_ordoñez_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/luis_ordoñez_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/luis_ordoñez_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/luis_ordoñez_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: null,
@@ -490,8 +492,8 @@ export const userGroupo3s = [
     nameFallback: "RP",
     role: { id: 6, name: "Social Media", href: "#" },
     bio: "¡Hola! Soy Rebeca Paniagua una creadora de contenido que se inspira en todo lo bello que me rodea, con una actitud positiva a no rendirme ante nada, decida a vivir cada momento como algo único mientras voy explorando. Y es un gusto darte la bienvenida a destellos de inspiración donde cada proceso fluye de manera inigualable.",
-    profilePicture: "./images/users/group3s/rebeca_paniagua_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/rebeca_paniagua_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/rebeca_paniagua_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/rebeca_paniagua_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/rebecapaniagua",
@@ -516,8 +518,8 @@ export const userGroupo3s = [
     nameFallback: "BQ",
     role: { id: 6, name: "Social Media", href: "#" },
     bio: "¡Hola! Soy Brenda Quijada. Me considero como una chica apasionada por la vida, que siempre trata la manera de poder llevar una sonrisa en el rostro a pesar de cualquier circunstancia, soy fiel creyente que todo lo que soy y tengo, sé lo debo completamente a Dios. Soy apasionada por la leer, cantar y sobre todo crear desde cero, me encanta imaginar que el diseño gráfico es un lienzo donde existe mucho por plasmar como un océano sin final.​Sabes que nada te impide seguir descubriendo y experimentando, el diseño es como un océano profundo pero con un largo camino por recorrer y saber que siempre hay una luz que te guía para nunca dejar de alcanzarlo. Todo se convierte en un lienzo en la profundidad del océano",
-    profilePicture: "./images/users/group3s/brenda_quijada_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/brenda_quijada_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/brenda_quijada_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/brenda_quijada_g3s/mockup.png"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/brendaquijada1",
@@ -543,8 +545,8 @@ export const userGroupo3s = [
     nameFallback: "SQ",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hola! Soy Steffany Quijano, una diseñadora que ama la naturaleza, disfruto de la soledad y del placer de perderme en un buen libro, soy amante de la sencillez y la introspección. Con optimismo, siempre me esfuerzo por mejorar cada día. Por eso creé Siqiniq, donde a través de mis diseños, busco iluminar el mundo con creatividad y esperanza, dejando una huella positiva en cada proyecto.",
-    profilePicture: "./images/users/group3s/steffany_quijano_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/steffany_quijano_g3s/mockup.png"],
+    profilePicture: "/images/users/group3s/steffany_quijano_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/steffany_quijano_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/siqiniq_sq",
@@ -570,7 +572,7 @@ export const userGroupo3s = [
     nameFallback: "KQ",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Un placer saludarte! Soy Karla Quintanilla, y mi conexión con la cultura de los videojuegos despertó en mí una pasión por las artes visuales. Como diseñadora, busco que mis creaciones no solo comuniquen visualmente, sino que también sean funcionales. He explorado áreas como la Ilustración, el Marketing Digital y Multimedia, y estoy emocionada por seguir creciendo en este fascinante mundo del diseño.",
-    profilePicture: "./images/users/group3s/karla_quintanilla_g3s/picture.jpg",
+    profilePicture: "/images/users/group3s/karla_quintanilla_g3s/picture.jpg",
     portfolioImages: [
       "./images/users/group3s/karla_quintanilla_g3s/mockup.jpg",
     ],
@@ -599,8 +601,8 @@ export const userGroupo3s = [
     nameFallback: "AR",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "¡Hola! Soy Anderson Rivas, apasionado del arte y todo lo relacionado con lo audiovisual. Desde pequeño, se despertó en mí el deseo de dibujar y explorar el mundo de los colores, la animación y la creatividad. Además, soy un amante de la música, caracterizado por mi afición a tocar la batería. Disfruto de la lectura y valoro el aprendizaje constante, día a día",
-    profilePicture: "./images/users/group3s/anderson_rivas_g3s/picture.png",
-    portfolioImages: ["./images/users/group3s/anderson_rivas_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/anderson_rivas_g3s/picture.png",
+    portfolioImages: ["/images/users/group3s/anderson_rivas_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance:
@@ -628,7 +630,7 @@ export const userGroupo3s = [
     nameFallback: "GS",
     role: { id: 3, name: "Ilustración", href: "#" },
     bio: "¡Hola! Soy Guadalupe Salinas, conocida como Shinnie. Apasionada de la magia, la energía y la luz. Nací en Cojutepeque, El Salvador, donde aprendí el valor del trabajo y la dedicación. Esta formación me ha convertido en una profesional responsable e innovadora. Como diseñadora, transformo ideas en experiencias que tocan el corazón, iluminando el camino de quienes confían en mí y dando lo mejor de mí.",
-    profilePicture: "./images/users/group3s/guadalupe_salinas_g3s/picture.jpg",
+    profilePicture: "/images/users/group3s/guadalupe_salinas_g3s/picture.jpg",
     portfolioImages: [
       "./images/users/group3s/guadalupe_salinas_g3s/mockup.jpg",
     ],
@@ -657,8 +659,8 @@ export const userGroupo3s = [
     nameFallback: "EV",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Hubo una vez un sueño, que se convirtió en una idea y hoy en día lo presentó al mundo. Bienvenidos a este espacio. Soy Emily Vásquez, también conocida como Mitsuki. Una diseñadora creativa y con gran pasión e interés por el arte, la ilustración, marketing y branding, implementó en mis trabajos lo que es el diseño vectorial, con un estilo que se orienta al dinamismo y las composiciones creativas.",
-    profilePicture: "./images/users/group3s/emily_vasquez_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/emily_vasquez_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/emily_vasquez_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/emily_vasquez_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/emilyvasquez9",
@@ -683,8 +685,8 @@ export const userGroupo3s = [
     nameFallback: "NZ",
     role: { id: 1, name: "Branding", href: "#" },
     bio: "Mi nombre es Pamela Nicole Zelaya Galdamez, tengo 23 años, soy una diseñadora creativa y soñadora, siempre en la búsqueda de mi mejor versión. Mi pasión radica en transformar ideas en realidades visuales, explorando cada rincón de mi imaginación para crear diseños que no solo sean estéticamente agradables, sino que también cuenten una historia. Estoy comprometida con mi desarrollo profesional y personal, siempre buscando aprender, innovar y superar mis propios límites. Mi objetivo es dejar una huella a través de mi trabajo, contribuyendo con soluciones creativas y frescas en cada proyecto que emprendo.",
-    profilePicture: "./images/users/group3s/nicole_zelaya_g3s/picture.jpg",
-    portfolioImages: ["./images/users/group3s/nicole_zelaya_g3s/mockup.jpg"],
+    profilePicture: "/images/users/group3s/nicole_zelaya_g3s/picture.jpg",
+    portfolioImages: ["/images/users/group3s/nicole_zelaya_g3s/mockup.jpg"],
     socialLinks: {
       instagram: null,
       behance: "https://www.behance.net/nicolezelaya1",

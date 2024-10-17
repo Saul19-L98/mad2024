@@ -3,7 +3,8 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "@/assets/Icons/symbols/ISearch";
 import { cn } from "@/lib/utils";
 import { useHomeStore } from "@/store/home.store";
-import { userProfiles } from "@/data/users/portfolio.mock";
+// import { userProfiles } from "@/data/users/portfolio.mock";
+import { userMainData } from "@/data/users/user.mainData";
 
 interface SearchbarProps {
   className?: string;
@@ -29,7 +30,7 @@ export const Searchbar: React.FC<SearchbarProps> = ({
     setSearchQuery(e.target.value);
     // console.log(e.target.value); // Log what is being typed
 
-    const filteredUsers = userProfiles.filter((user) =>
+    const filteredUsers = userMainData.filter((user) =>
       user.name.toLowerCase().includes(inputUserName)
     );
     // console.log(filteredUsers);

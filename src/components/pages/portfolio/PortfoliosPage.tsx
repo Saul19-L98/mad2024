@@ -10,8 +10,10 @@ import { useHomeStore } from "@/store/home.store";
 // import { userProfiles } from "@/data/users/portfolio.mock";
 import { Pagination } from "@/components/pages/portfolio/components/Pagination";
 import { usePaginationStore } from "@/store/pagination.store";
-import { UserProfile } from "@/types/users.type";
-import { userProfiles } from "@/data/users/portfolio.mock";
+// import { UserProfile } from "@/types/users.type";
+// import { userProfiles } from "@/data/users/portfolio.mock";
+import { UserProfileData } from "@/types/usersdata.type";
+import { userMainData } from "@/data/users/user.mainData";
 import { useBadgeStore } from "@/store/badge.store";
 import { useNavigate } from "react-router-dom";
 
@@ -20,7 +22,7 @@ export const PortfoliosPage = () => {
     useHomeStore();
   const { currentContent, setCurrentContent } = usePaginationStore();
   // console.log("portfolio current", currentContent);
-  const getUsersByRoleId = (usersObject: UserProfile[], roleId: number) => {
+  const getUsersByRoleId = (usersObject: UserProfileData[], roleId: number) => {
     const res = usersObject.filter((user) => user.role.id === roleId);
     return res;
   };
@@ -28,7 +30,7 @@ export const PortfoliosPage = () => {
   const navigate = useNavigate();
   const resetAndNavigate = (
     idBadge: number,
-    users: UserProfile[],
+    users: UserProfileData[],
     isFiltered: boolean
   ) => {
     setActiveBadge(idBadge);
@@ -39,10 +41,10 @@ export const PortfoliosPage = () => {
   };
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, userProfiles, false);
+      resetAndNavigate(idBadge, userMainData, false);
       return;
     }
-    const filteredUsers = getUsersByRoleId(userProfiles, idBadge);
+    const filteredUsers = getUsersByRoleId(userMainData, idBadge);
     resetAndNavigate(idBadge, filteredUsers, true);
     navigate("/portfolio?page=1");
   };
@@ -85,11 +87,19 @@ export const PortfoliosPage = () => {
                   <CardElement
                     key={user.id}
                     userId={user.id}
-                    avatarImageUrl={user.profilePicture}
+                    avatarImageUrl={
+                      user.profilePicture.length > 0
+                        ? user.profilePicture
+                        : "/images/users/mockup_default.jpg"
+                    }
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
-                    dynamicImageUrl={user.portfolioImages[0]}
+                    dynamicImageUrl={
+                      user.portfolioImages[0].length > 0
+                        ? user.portfolioImages[0]
+                        : "/images/users/mockup_default.jpg"
+                    }
                     personalWebsite={user.actions.viewWebsite || ""}
                     portfolio={user.actions.viewPortfolio || ""}
                   />
@@ -100,11 +110,19 @@ export const PortfoliosPage = () => {
                   <CardElement
                     key={user.id}
                     userId={user.id}
-                    avatarImageUrl={user.profilePicture}
+                    avatarImageUrl={
+                      user.profilePicture.length > 0
+                        ? user.profilePicture
+                        : "/images/users/mockup_default.jpg"
+                    }
                     avatarFallback={user.nameFallback}
                     name={user.name}
                     badgeData={user.role}
-                    dynamicImageUrl={user.portfolioImages[0]}
+                    dynamicImageUrl={
+                      user.portfolioImages[0].length > 0
+                        ? user.portfolioImages[0]
+                        : "/images/users/mockup_default.jpg"
+                    }
                     personalWebsite={user.actions.viewWebsite || ""}
                     portfolio={user.actions.viewPortfolio || ""}
                   />
