@@ -35,6 +35,8 @@ export const CardElement: React.FC<CardElementProps> = ({
   const navigate = useNavigate();
   // console.log("avatarImageUrl", avatarImageUrl);
   // console.log("dynamicImageUrl", dynamicImageUrl);
+  console.log("personalWebsite", personalWebsite);
+  console.log("portfolio", portfolio);
   return (
     <Card
       className="relative w-auto col-span-1 overflow-hidden bg-transparent border-none hover:cursor-pointer hover:opacity-75 group"

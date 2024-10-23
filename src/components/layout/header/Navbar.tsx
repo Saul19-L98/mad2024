@@ -12,9 +12,29 @@ import {
   madInstagram,
   madLinkedin,
 } from "@/data/config/mainLinks";
+import { useHomeStore } from "@/store/home.store";
+import { useBadgeStore } from "@/store/badge.store";
+import { UserProfileData } from "@/types/usersdata.type";
+import { usePaginationStore } from "@/store/pagination.store";
+import { userMainData } from "@/data/users/user.mainData";
 
 export const Navbar = () => {
+  const { setFilteredUsers, setBadgesFilter } = useHomeStore();
+  const { setActiveBadge } = useBadgeStore();
+  const { setCurrentContent } = usePaginationStore();
   const navigate = useNavigate();
+  const resetAndNavigate = (
+    idBadge: number,
+    users: UserProfileData[],
+    isFiltered: boolean
+  ) => {
+    setActiveBadge(idBadge);
+    setFilteredUsers(users);
+    setBadgesFilter(isFiltered ? users : []);
+    setCurrentContent(users);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/portfolio");
+  };
 
   return (
     <header className="w-full max-w-[90rem] px-4 my-4 md:px-16">
@@ -29,6 +49,7 @@ export const Navbar = () => {
             type="button"
             className="bg-[#FFB512] font-poppins font-semibold text-fontcolors-700 hover:bg-[#F68606]"
             onClick={() => {
+              resetAndNavigate(-1, userMainData, false);
               navigate("/portfolio");
             }}
           >

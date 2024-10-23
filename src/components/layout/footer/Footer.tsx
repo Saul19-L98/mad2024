@@ -149,6 +149,7 @@ export const Footer = () => {
               <Button
                 className="w-full font-semibold font-poppins bg-text-main-gradient sm:w-fit hover:bg-default-bg"
                 onClick={() => {
+                  resetAndNavigate(-1, userMainData, false);
                   navigate("/portfolio");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}

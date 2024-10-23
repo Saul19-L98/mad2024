@@ -206,19 +206,6 @@ export const Contact = () => {
                           </Link>
                         </li>
                       )}
-                      {/* {currentContactContent?.socialLinks.facebook && (
-                        <li>
-                          <Link
-                            to={currentContactContent?.socialLinks.facebook}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                            className="hover:opacity-75"
-                          >
-                            <IFacebookWhite />
-                          </Link>
-                        </li>
-                      )} */}
                       {currentContactContent?.socialLinks.linkedin && (
                         <li>
                           <Link
@@ -280,9 +267,9 @@ export const Contact = () => {
                       <Button
                         className="w-full font-semibold text-start font-poppins bg-text-main-gradient hover:bg-default-bg"
                         onClick={() => {
-                          if (currentContactContent?.actions.viewWebsite) {
+                          if (currentContactContent?.actions.viewPortfolio) {
                             window.open(
-                              currentContactContent.actions.viewWebsite,
+                              currentContactContent.actions.viewPortfolio,
                               "_blank"
                             );
                           }

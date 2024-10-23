@@ -18,7 +18,8 @@ import { mainTags } from "@/data/tags/tags.optins";
 import { Searchbar } from "@/components/common/pages/Searchbar";
 // import { userProfiles } from "@/data/users/users.mock";
 import { usersHomeProfiles } from "@/data/home/users.home";
-import { userProfiles as usersMainData } from "@/data/users/portfolio.mock";
+// import { userProfiles as usersMainData } from "@/data/users/portfolio.mock";
+import { userMainData } from "@/data/users/user.mainData";
 import { CardElement } from "@/components/common/CardElement";
 import { Button } from "@/components/ui/button";
 import { IArrow } from "@/assets/Icons/symbols/IArrow";
@@ -96,7 +97,7 @@ export const Home = () => {
       resetAndNavigate(idBadge, usersHomeProfiles, false);
       return;
     }
-    const filteredUsers = getUsersByRoleId(usersMainData, idBadge);
+    const filteredUsers = getUsersByRoleId(userMainData, idBadge);
     if (filteredUsers.length === 0) {
       resetAndNavigate(idBadge, usersHomeProfiles, false);
       return;
