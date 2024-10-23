@@ -17,7 +17,7 @@ import { ResourceTypeBadge } from "@/components/common/CustomBadge";
 import { mainTags } from "@/data/tags/tags.optins";
 import { Searchbar } from "@/components/common/pages/Searchbar";
 // import { userProfiles } from "@/data/users/users.mock";
-import { usersHomeProfiles } from "@/data/home/users.home";
+// import { usersHomeProfiles } from "@/data/home/users.home";
 // import { userProfiles as usersMainData } from "@/data/users/portfolio.mock";
 import { userMainData } from "@/data/users/user.mainData";
 import { CardElement } from "@/components/common/CardElement";
@@ -31,6 +31,7 @@ import { useBadgeStore } from "@/store/badge.store";
 import { usePaginationStore } from "@/store/pagination.store";
 // import { UserProfile } from "@/types/users.type";
 import { UserProfileData } from "@/types/usersdata.type";
+import { randomNineUsers } from "@/data/users/user.mainData";
 
 export const Home = () => {
   const { filteredUsers, isSearching, setFilteredUsers, setBadgesFilter } =
@@ -41,7 +42,7 @@ export const Home = () => {
   useEffect(() => {
     setFilteredUsers([]);
     setActiveBadge(0);
-  }, []);
+  }, [setActiveBadge, setFilteredUsers]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]); // Refs for each card
 
   useEffect(() => {
@@ -94,12 +95,12 @@ export const Home = () => {
 
   const selectBadge = (idBadge: number) => {
     if (idBadge === 0) {
-      resetAndNavigate(idBadge, usersHomeProfiles, false);
+      resetAndNavigate(idBadge, randomNineUsers, false);
       return;
     }
     const filteredUsers = getUsersByRoleId(userMainData, idBadge);
     if (filteredUsers.length === 0) {
-      resetAndNavigate(idBadge, usersHomeProfiles, false);
+      resetAndNavigate(idBadge, randomNineUsers, false);
       return;
     }
     resetAndNavigate(idBadge, filteredUsers, true);
@@ -237,7 +238,7 @@ export const Home = () => {
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-12">
               {filteredUsers.length === 0 &&
                 !isSearching &&
-                usersHomeProfiles.map((user) => (
+                randomNineUsers.map((user) => (
                   <CardElement
                     key={user.id}
                     userId={user.id}
